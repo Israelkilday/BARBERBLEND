@@ -19,7 +19,7 @@ model User {
 model Barbershop {
   id       String    @id @default(uuid())
   name     String
-  adress   String
+  address  String
   imageUrl String
   services Service[]
   bookings Booking[]
@@ -32,6 +32,7 @@ model Service {
   barbershopId String
   barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
   description  String
+  imageUrl     String
   bookings     Booking[]
 }
 
@@ -46,5 +47,3 @@ model Booking {
   date         DateTime
   status       String
 }
-
-
