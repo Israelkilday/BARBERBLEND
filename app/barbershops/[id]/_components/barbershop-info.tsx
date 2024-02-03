@@ -1,5 +1,8 @@
 "use client"
 
+import { Sheet, SheetContent, SheetTrigger } from "@/app/_components/ui/sheet";
+import SideMenu from "@/app/_components/side-menu";
+
 import { ChevronLeftIcon, MapPinIcon, MenuIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/app/_components/ui/button";
@@ -29,9 +32,21 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                     <ChevronLeftIcon />
                 </Button>
 
-                <Button size="icon" variant="outline" className="z-50 absolute top-4 right-4">
-                    <MenuIcon />
-                </Button>
+                <Sheet>
+                    <SheetTrigger asChild>
+                        <Button size="icon" variant="outline" className="z-50 absolute top-4 right-4">
+                            <MenuIcon />
+                        </Button>
+
+                        {/* <Button variant="outline" size="icon" className="h-8 w-8">
+                            <MenuIcon size={18} />
+                        </Button> */}
+                    </SheetTrigger>
+
+                    <SheetContent className="p-0">
+                        <SideMenu />
+                    </SheetContent>
+                </Sheet>
 
                 <Image
                     fill
