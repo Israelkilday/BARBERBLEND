@@ -37,10 +37,6 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                         <Button size="icon" variant="outline" className="z-50 absolute top-4 right-4">
                             <MenuIcon />
                         </Button>
-
-                        {/* <Button variant="outline" size="icon" className="h-8 w-8">
-                            <MenuIcon size={18} />
-                        </Button> */}
                     </SheetTrigger>
 
                     <SheetContent className="p-0">
