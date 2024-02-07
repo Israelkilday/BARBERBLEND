@@ -29,23 +29,6 @@ export default async function Home() {
       : Promise.resolve([]),
   ]);
 
-  // const barbershops = await db.barbershop.findMany({})
-
-  // const confirmedBookings = session?.user
-  //   ? await db.booking.findMany({
-  //     where: {
-  //       userId: (session.user as any).id,
-  //       date: {
-  //         gte: new Date(),
-  //       },
-  //     },
-  //     include: {
-  //       Service: true,
-  //       barbershop: true,
-  //     },
-  //   })
-  //   : [];
-
   return (
     <div>
       <Header />
