@@ -170,7 +170,7 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                 </SheetTrigger>
 
                                 <SheetContent className="p-0">
-                                    <SheetHeader className="text-left px-5 py-4 border-b border-solid border-secondary">
+                                    <SheetHeader className="text-left px-5 py-5 border-b border-solid border-secondary">
                                         <SheetTitle>Fazer Reserva</SheetTitle>
                                     </SheetHeader>
 
@@ -232,7 +232,7 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
 
                                     <div className="py-4 px-5 border-t border-solid border-secondary">
                                         <Card>
-                                            <CardContent className="px-3 py-2  gap-3 flex flex-col">
+                                            <CardContent className="px-3 py-3  gap-3 flex flex-col">
                                                 <div className="flex justify-between">
                                                     <h2 className="font-bold">
                                                         {service.name}
