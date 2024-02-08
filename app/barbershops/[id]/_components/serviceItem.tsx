@@ -158,8 +158,8 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                     currency: "BRL"
                                 }).format(Number(service.price))}
                             </p>
-                            {/*  */}
-                            <Sheet open={sheetIsOpen} onOpenChange={setSheetIsOpen} >
+
+                            <Sheet open={sheetIsOpen} onOpenChange={setSheetIsOpen}>
                                 <SheetTrigger asChild>
                                     <Button
                                         variant="secondary"
@@ -170,16 +170,16 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                 </SheetTrigger>
 
                                 <SheetContent className="p-0">
-                                    <SheetHeader className="text-left px-5 py-6 border-b border-solid border-secondary">
+                                    <SheetHeader className="text-left px-5 py-4 border-b border-solid border-secondary">
                                         <SheetTitle>Fazer Reserva</SheetTitle>
                                     </SheetHeader>
 
-                                    <div className="py-6">
+                                    <div className="py-2">
                                         <Calendar
                                             mode="single"
                                             selected={date}
                                             onSelect={handleDateClick}
-                                            className="mt-6"
+                                            className="mt-0 pt-0 pb-0"
                                             locale={ptBR}
                                             fromDate={new Date()}
                                             styles={{
@@ -216,12 +216,12 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                     {/* mostrar alguma lista de horarios apenas se alguma data etiver selecionada */}
 
                                     {date && (
-                                        <div className="flex gap-3 overflow-x-auto py-6 px-5 border-t border-solid border-secondary [&:: -webkit-scrollbar]:hidden">
+                                        <div className="flex gap-3 overflow-x-auto py-3 px-5 border-t border-solid border-secondary [&:: -webkit-scrollbar]:hidden">
                                             {timeList.map((time) => (
                                                 <Button
                                                     variant={hour === time ? "default" : "outline"}
                                                     key={time}
-                                                    className="rounded-full"
+                                                    className="rounded-full py-0"
                                                     onClick={() => handleHourClick(time)}
                                                 >
                                                     {time}
@@ -230,9 +230,9 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                         </div>
                                     )}
 
-                                    <div className="py-6 px-5 border-t border-solid border-secondary">
+                                    <div className="py-3 px-5 border-t border-solid border-secondary">
                                         <Card>
-                                            <CardContent className="p-3 gap-3 flex flex-col">
+                                            <CardContent className="px-3 py-2  gap-3 flex flex-col">
                                                 <div className="flex justify-between">
                                                     <h2 className="font-bold">
                                                         {service.name}
