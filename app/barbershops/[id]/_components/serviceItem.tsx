@@ -16,6 +16,7 @@ import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { getDayBookings } from "../_actions/get-day-bookings";
+import BookingInfo from "@/app/_components/booking-info";
 
 interface ServiceItemProps {
     barbershop: Barbershop;
@@ -34,18 +35,18 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
     const [sheetIsOpen, setSheetIsOpen] = useState(false);
     const [dayBookings, setDAyBookings] = useState<Booking[]>([]);
 
-    useEffect (() => {
-        if(!date) {
+    useEffect(() => {
+        if (!date) {
             return
         }
 
-     const refreshAvaliableHours = async () => {
-        const _dayBookings = await getDayBookings(barbershop.id, date);
+        const refreshAvaliableHours = async () => {
+            const _dayBookings = await getDayBookings(barbershop.id, date);
 
-        setDAyBookings(_dayBookings);
-     }   
+            setDAyBookings(_dayBookings);
+        }
 
-     refreshAvaliableHours();
+        refreshAvaliableHours();
 
     }, [date, barbershop.id])
 
@@ -92,7 +93,7 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                 description: format(newDate, "'Para' dd 'de' MMMM 'as' HH':'mm'.'", {
                     locale: ptBR
                 }),
-                
+
                 action: {
                     label: "Visualizar",
                     onClick: () => router.push("/bookings"),
@@ -111,7 +112,7 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
         if (!date) {
             return [];
         }
-        
+
         return generateDayTimeList(date).filter((time) => {
 
             const timeHour = Number(time.split(":")[0]);
@@ -126,7 +127,7 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
 
             if (!booking) {
                 return true;
-             }
+            }
 
             return false;
         })
@@ -213,8 +214,6 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                         />
                                     </div>
 
-                                    {/* mostrar alguma lista de horarios apenas se alguma data etiver selecionada */}
-
                                     {date && (
                                         <div className="flex gap-3 overflow-x-auto py-4 px-5 border-t border-solid border-secondary [&:: -webkit-scrollbar]:hidden">
                                             {timeList.map((time) => (
@@ -231,55 +230,16 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                     )}
 
                                     <div className="py-4 px-5 border-t border-solid border-secondary">
-                                        <Card>
-                                            <CardContent className="px-3 py-3  gap-3 flex flex-col">
-                                                <div className="flex justify-between">
-                                                    <h2 className="font-bold">
-                                                        {service.name}
-                                                    </h2>
-                                                    <h3 className="font-bold text-sm">
-                                                        {""}
-                                                        {Intl.NumberFormat("pt-BR", {
-                                                            style: "currency",
-                                                            currency: "BRL"
-                                                        }).format(Number(service.price))}
-                                                    </h3>
-                                                </div>
-
-                                                {date && (
-                                                    <div className="flex justify-between">
-                                                        <h3 className="text-gray-400 text-sm">
-                                                            Data
-                                                        </h3>
-
-                                                        <h4 className="text-sm">
-                                                            {format(date, "dd 'de' MMMM", {
-                                                                locale: ptBR,
-                                                            })}
-                                                        </h4>
-                                                    </div>
-                                                )}
-
-
-                                                {hour && (
-                                                    <div className="flex justify-between">
-                                                        <h3 className="text-gray-400 text-sm">
-                                                            Horario
-                                                        </h3>
-
-                                                        <h4 className="text-sm">{hour}</h4>
-                                                    </div>
-                                                )}
-
-                                                <div className="flex justify-between">
-                                                    <h3 className="text-gray-400 text-sm">
-                                                        Barbearia
-                                                    </h3>
-
-                                                    <h4 className="text-sm">{barbershop.name}</h4>
-                                                </div>
-                                            </CardContent>
-                                        </Card>
+                                        <BookingInfo
+                                            booking={{
+                                                barbershop: barbershop,
+                                                date:
+                                                    date && hour
+                                                        ? setMinutes(setHours(date, Number(hour.split(":")[0])), Number(hour.split(":")[1]))
+                                                        : undefined,
+                                                Service: service,
+                                            }}
+                                        />
                                     </div>
 
                                     <SheetFooter className="px-5">
