@@ -38,51 +38,60 @@ export default async function Home() {
     <div>
       <Header />
 
-      <div className="px-5 pt-5">
-        <h2 className="text-xl font-bold">
-          {session?.user ? `Olá, ${session.user.name?.split(" ")[0]}!` : "Olá! Vamos agendar um corte hoje?"}
-        </h2>
-
-        <p className="capitalize text-sm">
-          {format(new Date(), "EEEE ',' dd 'de' MMMM", {
-            locale: ptBR,
-          })}
-        </p>
-      </div>
-
-      <div className="px-5 mt-6">
-        <Search />
-      </div>
-
-      <div className="mt-6">
-        {confirmedBookings.length > 0 && (
-          <>
-            <h2 className="pl-5 text-xs mb-3 uppercase text-gray-400 font-bold">
-              Agendamentos
+      <div className="md:flex md:px-32 md:py-16">
+        <div>
+          <div className="px-5 pt-5 md:px-0 md:py-0">
+            <h2 className="text-xl font-bold md:text-2xl">
+              {session?.user ? `Olá, ${session.user.name?.split(" ")[0]}!` : "Olá! Vamos agendar um corte hoje?"}
             </h2>
 
-            <div className="px-5 flex gap-3 overflow-x-auto [&:: -webkit-scrollbar]:hidden">
-              {confirmedBookings.map(
-                booking => <BookingItem key={booking.id} booking={booking} />
-              )}
-            </div>
-          </>
-        )}
-      </div>
+            <p className="capitalize text-sm">
+              {format(new Date(), "EEEE ',' dd 'de' MMMM", {
+                locale: ptBR,
+              })}
+            </p>
+          </div>
 
-      <div className="mt-6">
-        <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold">
-          Recomendados
-        </h2>
+          <div className="px-5 mt-6">
+            <Search />
+          </div>
 
-        <div className="flex px-5 gap-4 overflow-x-auto [&:: -webkit-scrollbar]:hidden">
-          {barbershops.map((barbershop) => (
-            <div key={barbershop.id} className="min-w-[167px] max-w-[167px]">
-              <BarbershopItem barbershop={barbershop} />
-            </div>
-          ))}
+          <div className="mt-6">
+            {confirmedBookings.length > 0 && (
+              <>
+                <h2 className="pl-5 text-xs mb-3 uppercase text-gray-400 font-bold">
+                  Agendamentos
+                </h2>
+
+                <div className="px-5 flex gap-3 overflow-x-auto [&:: -webkit-scrollbar]:hidden">
+                  {confirmedBookings.map(
+                    booking => <BookingItem key={booking.id} booking={booking} />
+                  )}
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+
+
+        <div className="mt-6">
+          <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold">
+            Recomendados
+          </h2>
+
+          <div className="flex px-5 gap-4 overflow-x-auto [&:: -webkit-scrollbar]:hidden">
+            {barbershops.map((barbershop) => (
+              <div key={barbershop.id} className="min-w-[167px] max-w-[167px]">
+                <BarbershopItem barbershop={barbershop} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+
+
+
 
       <div className="mt-6 mb-[4.5rem]">
         <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold">

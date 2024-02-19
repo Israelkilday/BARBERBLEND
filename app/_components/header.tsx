@@ -21,7 +21,13 @@ const Header = () => {
             <Card>
                 <CardContent className="p-5 justify-between items-center flex flex-row md:px-32">
                     <Link href="/">
-                        <Image src="/Logo.png" alt="FSW Barber" height={22} width={120} />
+                        <Image
+                            src="/Logo.png"
+                            alt="FSW Barber"
+                            height={22}
+                            width={120}
+                            className="md:h-8"
+                        />
                     </Link>
 
                     {data?.user ? (
@@ -31,31 +37,31 @@ const Header = () => {
                                     <AvatarImage src={data.user?.image ?? ""} />
                                 </Avatar>
 
-                                <h2 className="font-bold">{data.user.name}</h2>
+                                <h2 className="font-bold md:text-lg">{data.user.name}</h2>
 
                                 <Button
                                     asChild
                                     className="justify-start bg-card border-none hidden md:flex hover:bg-accent"
                                 >
-                                    <Link href="/bookings">
-                                        <CalendarIcon size={18} className="mr-2" />
+                                    <Link href="/bookings" className="md:text-lg">
+                                        <CalendarIcon size={24} className="mr-2" />
                                         Agendamentos
                                     </Link>
                                 </Button>
-                            <Button variant="secondary" size="icon">
-                                <LogOutIcon onClick={handleLogoutClick} />
-                            </Button>
+                                <Button variant="secondary" size="icon">
+                                    <LogOutIcon onClick={handleLogoutClick} />
+                                </Button>
                             </div>
                         </div>
 
                     ) : (
-                            <Button
-                                onClick={handleLoginClick}
-                                className="hover:bg-primary/85 hidden md:flex"
-                            >
-                                <CircleUserRound className="mr-2" size={18} />
-                                Login
-                            </Button>
+                        <Button
+                            onClick={handleLoginClick}
+                            className="hover:bg-primary/85 hidden md:flex md:text-lg"
+                        >
+                            <CircleUserRound className="mr-2" size={24} />
+                            Login
+                        </Button>
                     )}
 
                     <Sheet>
