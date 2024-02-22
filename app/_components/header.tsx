@@ -32,7 +32,7 @@ const Header = () => {
 
                     {data?.user ? (
                         <div className="flex gap-2 justify-between px-5 items-center">
-                            <div className="items-center gap-3 flex">
+                            <div className="hidden items-center gap-3 lg:flex">
                                 <Avatar>
                                     <AvatarImage src={data.user?.image ?? ""} />
                                 </Avatar>
@@ -41,14 +41,19 @@ const Header = () => {
 
                                 <Button
                                     asChild
-                                    className="justify-start bg-card border-none hidden md:flex hover:bg-accent"
+                                    className="justify-start bg-card border-none hidden lg:flex hover:bg-accent"
                                 >
                                     <Link href="/bookings" className="md:text-lg">
                                         <CalendarIcon size={24} className="mr-2" />
                                         Agendamentos
                                     </Link>
                                 </Button>
-                                <Button variant="secondary" size="icon">
+
+                                <Button
+                                    variant="secondary"
+                                    size="icon"
+                                    className="hidden lg:flex"
+                                >
                                     <LogOutIcon onClick={handleLogoutClick} />
                                 </Button>
                             </div>
@@ -57,7 +62,7 @@ const Header = () => {
                     ) : (
                         <Button
                             onClick={handleLoginClick}
-                            className="hover:bg-primary/85 hidden md:flex md:text-lg"
+                            className="hover:bg-primary/85 hidden lg:flex md:text-lg"
                         >
                             <CircleUserRound className="mr-2" size={24} />
                             Login
@@ -66,8 +71,9 @@ const Header = () => {
 
                     <Sheet>
                         <SheetTrigger asChild>
-                            <Button variant="outline" size="icon" className="h-8 w-8 md:hidden">
-                                <MenuIcon size={18} />
+                            <Button variant="outline" size="icon" className="h-8 w-8 md:h-9 md:w-9 lg:hidden">
+                                <MenuIcon size={18} className="md:hidden" />
+                                <MenuIcon size={26} className="md:block" />
                             </Button>
                         </SheetTrigger>
 

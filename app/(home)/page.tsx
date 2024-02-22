@@ -38,21 +38,21 @@ export default async function Home() {
     <div>
       <Header />
 
-      <div className="md:flex md:px-32 md:py-16">
+      <div className="md:px-32 md:py-16">
         <div>
           <div className="px-5 pt-5 md:px-0 md:py-0">
             <h2 className="text-xl font-bold md:text-2xl">
               {session?.user ? `Olá, ${session.user.name?.split(" ")[0]}!` : "Olá! Vamos agendar um corte hoje?"}
             </h2>
 
-            <p className="capitalize text-sm">
+            <p className="capitalize text-sm md:text-2xl">
               {format(new Date(), "EEEE ',' dd 'de' MMMM", {
                 locale: ptBR,
               })}
             </p>
           </div>
 
-          <div className="px-5 mt-6">
+          <div className="px-5 mt-6 md:px-0 md:w-96 ">
             <Search />
           </div>
 

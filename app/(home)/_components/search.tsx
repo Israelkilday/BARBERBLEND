@@ -45,7 +45,9 @@ const Search = ({defaultValues}: SearchProps) => {
                         render={({field}) => (
                             <FormItem className="w-full">
                                 <FormControl>
-                                    <Input
+                                    <Input 
+                                    className="md:h-11"
+                                    style={{fontSize: "16px"}} 
                                         placeholder="Busque por uma barbearia..." {...field}
                                     />
                                 </FormControl>
