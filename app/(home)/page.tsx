@@ -45,7 +45,7 @@ export default async function Home() {
               {session?.user ? `Olá, ${session.user.name?.split(" ")[0]}!` : "Olá! Vamos agendar um corte hoje?"}
             </h2>
 
-            <p className="capitalize text-sm md:text-2xl">
+            <p className="capitalize text-sm md:text-xl">
               {format(new Date(), "EEEE ',' dd 'de' MMMM", {
                 locale: ptBR,
               })}
@@ -59,11 +59,11 @@ export default async function Home() {
           <div className="mt-6">
             {confirmedBookings.length > 0 && (
               <>
-                <h2 className="pl-5 text-xs mb-3 uppercase text-gray-400 font-bold">
+                <h2 className="pl-5 text-xs mb-3 uppercase text-gray-400 font-bold md:pl-0 md:text-lg">
                   Agendamentos
                 </h2>
 
-                <div className="px-5 flex gap-3 overflow-x-auto [&:: -webkit-scrollbar]:hidden">
+                <div className="px-5 flex gap-3 overflow-x-auto [&:: -webkit-scrollbar]:hidden md:px-0">
                   {confirmedBookings.map(
                     booking => <BookingItem key={booking.id} booking={booking} />
                   )}
@@ -75,13 +75,13 @@ export default async function Home() {
 
 
         <div className="mt-6">
-          <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold">
+          <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold md:px-0 md:text-lg">
             Recomendados
           </h2>
 
-          <div className="flex px-5 gap-4 overflow-x-auto [&:: -webkit-scrollbar]:hidden">
+          <div className="flex px-5 gap-4 overflow-x-auto md:p-0 [&:: -webkit-scrollbar]:hidden">
             {barbershops.map((barbershop) => (
-              <div key={barbershop.id} className="min-w-[167px] max-w-[167px]">
+              <div key={barbershop.id} className="min-w-[167px] max-w-[167px] md:min-w-[197px] md:max-w-[197px] ">
                 <BarbershopItem barbershop={barbershop} />
               </div>
             ))}

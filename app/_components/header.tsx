@@ -72,7 +72,6 @@ const Header = () => {
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button variant="outline" size="icon" className="h-8 w-8 md:h-9 md:w-9 lg:hidden">
-                                <MenuIcon size={18} className="md:hidden" />
                                 <MenuIcon size={26} className="md:block" />
                             </Button>
                         </SheetTrigger>

@@ -23,7 +23,7 @@ interface SearchProps {
     defaultValues?: z.infer<typeof formSchema>;
 }
 
-const Search = ({defaultValues}: SearchProps) => {
+const Search = ({ defaultValues }: SearchProps) => {
     const router = useRouter();
 
     const form = useForm<z.infer<typeof formSchema>>({
@@ -38,16 +38,16 @@ const Search = ({defaultValues}: SearchProps) => {
     return (
         <div className="flex items-center gap-2">
             <Form {...form}>
-                <form className="flex w-full gap-4" onSubmit={form.handleSubmit(handleSubmit)}>
+                <form className="flex w-full gap-4 items-center" onSubmit={form.handleSubmit(handleSubmit)}>
                     <FormField
                         control={form.control}
                         name="search"
-                        render={({field}) => (
+                        render={({ field }) => (
                             <FormItem className="w-full">
                                 <FormControl>
-                                    <Input 
-                                    className="md:h-11"
-                                    style={{fontSize: "16px"}} 
+                                    <Input
+                                        className="md:h-11"
+                                        style={{ fontSize: "16px" }}
                                         placeholder="Busque por uma barbearia..." {...field}
                                     />
                                 </FormControl>
@@ -58,7 +58,7 @@ const Search = ({defaultValues}: SearchProps) => {
                     />
 
                     <Button variant="default" type="submit">
-                        <SearchIcon size={20} />
+                        <SearchIcon size={18} />
                     </Button>
                 </form>
             </Form>

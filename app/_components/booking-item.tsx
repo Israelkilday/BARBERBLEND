@@ -64,21 +64,21 @@ const BookingItem = ({ booking }: BookingItemProps) => {
                         <div className="flex flex-col gap-2 py-5 flex-[3] pl-5">
                             <Badge
                                 variant={isBookingConfirmed ? "default" : "secondary"}
-                                className="w-fit"
+                                className="w-fit md:text-base"
                             >
                                 {isBookingConfirmed ? "Confirmado" : "Finalizado"}
                             </Badge>
 
-                            <h2 className="font-bold">{booking.Service.name}</h2>
+                            <h2 className="font-bold md:text-base">{booking.Service.name}</h2>
 
                             <div className="flex items-center gap-2">
-                                <Avatar className="h-6 w-6">
+                                <Avatar className="h-7 w-7">
                                     <AvatarImage src={booking.barbershop.imageUrl} />
 
                                     <AvatarFallback>A</AvatarFallback>
                                 </Avatar>
 
-                                <h3 className="text-sm">{booking.barbershop.name}</h3>
+                                <h3 className="text-sm md:text-base">{booking.barbershop.name}</h3>
                             </div>
                         </div>
 
