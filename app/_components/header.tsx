@@ -19,7 +19,7 @@ const Header = () => {
     return (
         <header>
             <Card>
-                <CardContent className="p-5 justify-between items-center flex flex-row md:px-32">
+                <CardContent className="p-5 justify-between items-center flex flex-row lg:px-32">
                     <Link href="/">
                         <Image
                             src="/Logo.png"

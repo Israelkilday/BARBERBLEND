@@ -15,3 +15,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 export const db = prisma;
+
+// npx prisma migrate dev --name add_initial_tables
+// npm install -D ts-node
+// npx prisma db seed
