@@ -8,6 +8,7 @@ import BarbershopItem from "./_components/barbershop-item";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../_lib/auth";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../_components/ui/carousel";
+import Image from "next/image";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -39,7 +40,12 @@ export default async function Home() {
     <div>
       <Header />
 
-      <div className="lg:flex justify-between lg:px-32 lg:py-16">
+      <div
+        className="lg:flex justify-between lg:px-32 lg:py-16"
+      >
+        {/* bg-transparent md:bg-center md:bg-cover md:bg-no-repeat */}
+        {/* style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/banner.jpeg)", filter: "drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5))" }} */}
+
         <div>
           <div className="px-5 pt-5 lg:px-0 lg:py-0">
             <h2 className="text-xl font-bold md:text-2xl">
@@ -108,7 +114,7 @@ export default async function Home() {
           >
             <CarouselContent>
               {barbershops.map((barbershop) => (
-                <CarouselItem key={barbershop.id} className="min-w-[183px] max-w-[183px] md:min-w-[197px] md:max-w-[197px]">
+                <CarouselItem key={barbershop.id} className="min-w-[183px] max-w-[183px] md:min-w-[233px] md:max-w-[233px]">
                   <BarbershopItem barbershop={barbershop} />
                 </CarouselItem>
               ))}
@@ -125,9 +131,20 @@ export default async function Home() {
             ))}
           </div> */}
         </div >
+
+        <Image
+          fill
+          src="/banner.jpeg"
+          alt="Banner"
+          // sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
+          className="-z-30 opacity-10 drop-shadow-lg hidden lg:flex"
+        />
       </div >
 
-      <div className="mt-6 mb-[4.5rem]">
+      <div className="mt-6 lg:mt-28 mb-[4.5rem]">
         <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold md:text-xl">
           Populares
         </h2>

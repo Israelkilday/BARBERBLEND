@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "barbershop_banner": "url(/banner.jpeg)"
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
