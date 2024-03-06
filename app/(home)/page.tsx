@@ -114,7 +114,8 @@ export default async function Home() {
           >
             <CarouselContent>
               {barbershops.map((barbershop) => (
-                <CarouselItem key={barbershop.id} className="min-w-[183px] max-w-[183px] md:min-w-[233px] md:max-w-[233px]">
+                <CarouselItem key={barbershop.id} className="min-w-[183px] max-w-[183px] md:min-w-[243px] md:max-w-[243px] ">
+                  {/* min-w-[183px] max-w-[183px] md:min-w-[233px] md:max-w-[233px] */}
                   <BarbershopItem barbershop={barbershop} />
                 </CarouselItem>
               ))}
@@ -140,7 +141,7 @@ export default async function Home() {
           style={{
             objectFit: "cover",
           }}
-          className="-z-30 opacity-10 drop-shadow-lg hidden lg:flex"
+          className="-z-30 opacity-10 hidden lg:flex"
         />
       </div >
 

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-import { CalendarIcon, CircleUserRound, LogInIcon, LogOutIcon, MenuIcon, UserIcon } from "lucide-react";
+import { CalendarIcon, CircleUserRound, LogInIcon, LogOutIcon, MenuIcon, Scissors, UserIcon } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import SideMenu from "./side-menu";
 import Link from "next/link";
@@ -20,14 +20,19 @@ const Header = () => {
         <header>
             <Card>
                 <CardContent className="p-5 justify-between items-center flex flex-row lg:px-32">
-                    <Link href="/">
-                        <Image
-                            src="/Logo.png"
+                    <Link href="/" className="flex gap-1 p-2 rounded-md hover:bg-accent font-bold duration-300">
+                        <Scissors className="font-bold" />
+                        <h2>BARB-BOOK</h2>
+                        <Scissors className="font-bold trasform rotate-180"/>
+                        {/* <Image
+                            src="/Logo2.png"
                             alt="FSW Barber"
                             height={22}
                             width={120}
-                            className="md:h-8"
-                        />
+                            style={{
+                                objectFit: "cover",
+                            }}
+                        /> */}
                     </Link>
 
                     {data?.user ? (
