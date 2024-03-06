@@ -40,9 +40,7 @@ export default async function Home() {
     <div>
       <Header />
 
-      <div
-        className="lg:flex justify-between lg:px-32 lg:py-16"
-      >
+      <div className="lg:flex justify-between lg:px-32 lg:py-16">
         <div >
           <div className="px-5 pt-5 lg:px-0 lg:py-0">
             <h2 className="text-xl font-bold md:text-2xl">
@@ -92,7 +90,7 @@ export default async function Home() {
           <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold lg:px-0 md:text-lg">
             Recomendados
           </h2>
-          
+
           <Carousel
             className=" overflow-x-auto pl-5 pr-0 lg:pl-0 md:max-w-3xl lg:max-w-6xl lg:overflow-hidden"
           >
@@ -112,7 +110,6 @@ export default async function Home() {
           fill
           src="/banner.jpeg"
           alt="Banner"
-          // sizes="100vw"
           style={{
             objectFit: "cover",
           }}
@@ -120,18 +117,33 @@ export default async function Home() {
         />
       </div >
 
-      <div className="mt-6 lg:mt-28 mb-[4.5rem]">
-        <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold md:text-xl">
-          Populares
+      {/* lg:flex justify-between lg:px-32 lg:py-16 */}
+      <div className="mt-12 mb-[4.5rem] lg:px-32 lg:py-16 ">
+        <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold md:text-lg lg:px-0">
+          Escolha sua Barbearia
         </h2>
 
-        <div className="flex px-5 gap-4 overflow-x-auto [&:: -webkit-scrollbar]:hidden">
+        <Carousel
+          className=" overflow-x-auto pl-5 pr-0 lg:pl-0 md:max-w-3xl lg:max-w-6xl lg:overflow-hidden"
+        >
+          <CarouselContent>
+            {recomendedBarbershops.map((barbershop) => (
+              <CarouselItem key={barbershop.id} className="min-w-[183px] max-w-[183px] md:min-w-[243px] md:max-w-[243px] lg:max-w-[275px] lg:min-w-[275px]">
+                <BarbershopItem barbershop={barbershop} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden left-1 lg:flex" />
+          <CarouselNext className="hidden right-1 lg:flex" />
+        </Carousel >
+
+        {/* <div className="flex px-5 gap-4 overflow-x-auto [&:: -webkit-scrollbar]:hidden">
           {recomendedBarbershops.map((barbershop) => (
             <div key={barbershop.id} className="min-w-[167px] max-w-[167px] md:min-w-[197px] md:max-w-[197px]">
               <BarbershopItem barbershop={barbershop} />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div >
   );
