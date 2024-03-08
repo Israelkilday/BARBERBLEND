@@ -40,7 +40,7 @@ export default async function Home() {
     <div>
       <Header />
 
-      <div className="lg:flex justify-between lg:px-32 lg:py-16">
+      <div className="lg:flex justify-between lg:px-32 lg:py-16 lg:mb-16">
         <div >
           <div className="px-5 pt-5 lg:px-0 lg:py-0">
             <h2 className="text-xl font-bold md:text-2xl">
@@ -118,7 +118,7 @@ export default async function Home() {
       </div >
 
       {/* mb-[4.5rem] */}
-      <div className="mt-6 lg:mt-12 lg:px-32 lg:py-16 ">
+      <div className="mt-6 lg:mt-16 lg:px-32 lg:py-16 ">
         <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold md:text-lg lg:px-0">
           Escolha sua Barbearia
         </h2>
@@ -138,45 +138,58 @@ export default async function Home() {
         </Carousel >
       </div>
 
-      <div className="mt-6 lg:mt-12 mb-[4.5rem] lg:px-32 lg:py-16 ">
+      <div className="mt-6 mb-[4.5rem] lg:px-32 lg:mt-0  ">
         <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold md:text-lg lg:px-0">
           Nossa Galeria
         </h2>
 
-        <section className="flex px-5 flex-col w-full gap-3 grayscale">
-          <div className="flex w-full gap-3">
-            <div className="flex flex-col gap-3 w-1/2  md:min-w-64 overflow-hidden">
-              
-              <img src="/teste.jpeg" alt="teste" className="object-cover h-[100px] w-full hover:scale-105 hover:opacity-30 duration-200" />
+        <section className="flex px-5 lg:px-0 flex-col w-full gap-3 grayscale">
+          <div className="flex w-full gap-z3">
+            <div className="flex flex-col w-full gap-3 overflow-hidden">
 
-              <img src="/teste.jpeg" alt="teste" className="object-cover h-[100px] w-full hover:scale-105 hover:opacity-30 duration-200" />
+              <div className="flex overflow-hidden">
+                <img src="/teste.jpeg" alt="teste" className="object-cover w-full h-40 hover:scale-105 hover:opacity-30 duration-200" />
+              </div>
 
-              <img src="/teste.jpeg" alt="teste" className="object-cover h-[100px] w-full hover:scale-105 hover:opacity-30 duration-200" />
+              <div className="flex overflow-hidden">
+                <img src="/teste.jpeg" alt="teste" className="object-cover w-full h-40 hover:scale-105 hover:opacity-30 duration-200" />
+              </div>
             </div>
 
-            <div className="flex w-full gap-3 h-[324px]">
-              <img src="/teste.jpeg" alt="teste" className="object-cover h-full w-2/5 hover:scale-105 hover:opacity-30 duration-200" />
+            <div className="flex gap-3 overflow-hidden">
+              <div className="flex gap-3 overflow-hidden">
+                <img src="/teste.jpeg" alt="teste" className="object-cover h-[332px] w-[350px] md:w-[1000px] hover:scale-105 hover:opacity-30 duration-200" />
+              </div>
 
-              <div className="flex flex-col h-[324px] w-full gap-3">
-                
-                <img src="/teste.jpeg" alt="teste" className="object-cover h-20 w-full hover:scale-105 hover:opacity-30 duration-200" />
+              <div className="flex flex-col gap-3 overflow-hidden">
+                <div className="flex overflow-hidden">
+                  <img src="/teste.jpeg" alt="teste" className="object-cover h-28 w-full md:w-[1400px] hover:scale-105 hover:opacity-30 duration-200" />
+                </div>
 
-                <img src="/teste.jpeg" alt="teste" className="object-cover h-[232px] w-full hover:scale-105 hover:opacity-30 duration-200" />
+                <div className="flex overflow-hidden">
+                  <img src="/teste.jpeg" alt="teste" className="object-cover h-[208px] w-full  hover:scale-105 hover:opacity-30 duration-200" />
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row w-full gap-3 overflow-hidden">
-            <img src="/teste.jpeg" alt="teste" className="object-cover h-1/4 md:h-[324px] w-full md:max-w-64 hover:scale-105 hover:opacity-30 duration-200" />
+          <div className="flex w-full gap-3">
+            <div className="flex w-full gap-3 overflow-hidden">
+              <img src="/teste.jpeg" alt="teste" className="object-cover w-full h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
+            </div>
 
-            <div className="flex w-4/5 gap-3 ">
-              <img src="/teste.jpeg" alt="teste" className="object-cover h-1/6 md:h-[324px] w-3/4 hover:scale-105 hover:opacity-30 duration-200" />
+            <div className="flex flex-col md:flex-row w-full md:w-[3000px] gap-3 overflow-hidden">
+              <div className="flex w-full md:w-[2500px] gap-3 overflow-hidden">
+                <img src="/teste.jpeg" alt="teste" className="object-cover w-full h-40 md:h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
+              </div>
 
-              <img src="/teste.jpeg" alt="teste" className="object-cover h-1/6 md:h-[324px] w-3/4 md:w-48 hover:scale-105 hover:opacity-30 duration-200" />
+              <div className="flex w-full gap-3 overflow-hidden">
+                <img src="/teste.jpeg" alt="teste" className="object-cover w-full h-40 md:h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
+              </div>
             </div>
           </div>
         </section>
-      </div>
+      </div >
     </div >
   );
 };
