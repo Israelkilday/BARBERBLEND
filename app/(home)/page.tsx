@@ -144,15 +144,15 @@ export default async function Home() {
         </h2>
 
         <section className="flex px-5 lg:px-0 flex-col w-full gap-3 grayscale">
-          <div className="flex w-full gap-z3">
+          <div className="flex w-full gap-3">
             <div className="flex flex-col w-full gap-3 overflow-hidden">
 
               <div className="flex overflow-hidden">
-                <img src="/teste.jpeg" alt="teste" className="object-cover w-full h-40 hover:scale-105 hover:opacity-30 duration-200" />
+                <img src="/image_galery_1.jpg" alt="teste" className="object-cover w-full h-40 hover:scale-105 hover:opacity-30 duration-200" />
               </div>
 
               <div className="flex overflow-hidden">
-                <img src="/teste.jpeg" alt="teste" className="object-cover w-full h-40 hover:scale-105 hover:opacity-30 duration-200" />
+                <img src="/image_galery_2.jpg" alt="teste" className="object-cover w-full h-40 hover:scale-105 hover:opacity-30 duration-200" />
               </div>
             </div>
 
@@ -163,11 +163,11 @@ export default async function Home() {
 
               <div className="flex flex-col gap-3 overflow-hidden">
                 <div className="flex overflow-hidden">
-                  <img src="/teste.jpeg" alt="teste" className="object-cover h-28 w-full md:w-[1400px] hover:scale-105 hover:opacity-30 duration-200" />
+                  <img src="/image_galery_4.jpg" alt="image_4" className="object-cover h-28 w-full md:w-[1400px] hover:scale-105 hover:opacity-30 duration-200" />
                 </div>
 
                 <div className="flex overflow-hidden">
-                  <img src="/teste.jpeg" alt="teste" className="object-cover h-[208px] w-full  hover:scale-105 hover:opacity-30 duration-200" />
+                  <img src="/image_galery_5.jpg" alt="teste" className="object-cover h-[208px] w-full  hover:scale-105 hover:opacity-30 duration-200" />
                 </div>
               </div>
             </div>
@@ -175,16 +175,16 @@ export default async function Home() {
 
           <div className="flex w-full gap-3">
             <div className="flex w-full gap-3 overflow-hidden">
-              <img src="/teste.jpeg" alt="teste" className="object-cover w-full h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
+              <img src="/image_galery_6.jpg" alt="image_6" className="object-cover w-full h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
             </div>
 
             <div className="flex flex-col md:flex-row w-full md:w-[3000px] gap-3 overflow-hidden">
               <div className="flex w-full md:w-[2500px] gap-3 overflow-hidden">
-                <img src="/teste.jpeg" alt="teste" className="object-cover w-full h-40 md:h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
+                <img src="image_galery_7.jpg" alt="teste" className="object-cover w-full h-40 md:h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
               </div>
 
               <div className="flex w-full gap-3 overflow-hidden">
-                <img src="/teste.jpeg" alt="teste" className="object-cover w-full h-40 md:h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
+                <img src="image_galery_8.jpg" alt="teste" className="object-cover w-full h-40 md:h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
               </div>
             </div>
           </div>
