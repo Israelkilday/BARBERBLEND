@@ -190,6 +190,13 @@ export default async function Home() {
           </div>
         </section>
       </div >
+
+      <div className="mt-6 mb-[4.5rem] lg:px-32 lg:mt-0  ">
+        <h2 className="px-5 text-xs lg:text-center mb-3 uppercase text-gray-400 font-bold md:text-lg lg:text-2xl lg:px-0">
+          Depoimentos
+        </h2>
+
+      </div>
     </div >
   );
 };
