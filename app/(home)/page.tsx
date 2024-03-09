@@ -108,18 +108,18 @@ export default async function Home() {
 
         <Image
           fill
-          src="/banner.jpeg"
+          src="/banner.jpg"
           alt="Banner"
           style={{
             objectFit: "cover",
           }}
-          className="-z-30 opacity-10 hidden lg:flex"
+          className="-z-30 opacity-30 grayscale hidden lg:flex max-h-[600px]"
         />
       </div >
 
       {/* mb-[4.5rem] */}
       <div className="mt-6 lg:mt-16 lg:px-32 lg:py-16 ">
-        <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold md:text-lg lg:px-0">
+        <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold md:text-lg lg:text-center lg:text-2xl lg:px-0">
           Escolha sua Barbearia
         </h2>
 
@@ -139,7 +139,7 @@ export default async function Home() {
       </div>
 
       <div className="mt-6 mb-[4.5rem] lg:px-32 lg:mt-0  ">
-        <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold md:text-lg lg:px-0">
+        <h2 className="px-5 text-xs lg:text-center mb-3 uppercase text-gray-400 font-bold md:text-lg lg:text-2xl lg:px-0">
           Nossa Galeria
         </h2>
 

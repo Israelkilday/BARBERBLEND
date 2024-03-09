@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { CalendarIcon, CircleUserRound, LogInIcon, LogOutIcon, MenuIcon, Scissors, UserIcon } from "lucide-react";
@@ -23,19 +22,9 @@ const Header = () => {
                     <Link href="/" className="flex gap-1 p-2 rounded-md hover:bg-accent font-bold duration-300 outline-none">
                         <Scissors className="font-bold" />
                         
-                        <h2>BARB-BOOK</h2>
+                        <h2>BARBERBLEND</h2>
                         
                         <Scissors className="font-bold trasform rotate-180" />
-                        
-                        {/* <Image
-                            src="/Logo2.png"
-                            alt="FSW Barber"
-                            height={22}
-                            width={120}
-                            style={{
-                                objectFit: "cover",
-                            }}
-                        /> */}
                     </Link>
 
                     {data?.user ? (
