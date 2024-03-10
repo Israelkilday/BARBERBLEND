@@ -9,6 +9,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../_lib/auth";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../_components/ui/carousel";
 import Image from "next/image";
+import ServicesSection from "./_components/servicesSection";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -195,7 +196,8 @@ export default async function Home() {
         <h2 className="px-5 text-xs lg:text-center mb-3 uppercase text-gray-400 font-bold md:text-lg lg:text-2xl lg:px-0">
           Depoimentos
         </h2>
-
+        
+          <ServicesSection />
       </div>
     </div >
   );
