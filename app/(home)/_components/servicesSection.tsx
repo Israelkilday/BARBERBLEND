@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/app/_components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/app/_components/ui/carousel";
+import { NotebookPen, Sparkles } from "lucide-react";
 
 // interface ServicesArray {
 //   id: number;
@@ -11,16 +12,16 @@ import { Carousel, CarouselContent, CarouselItem } from "@/app/_components/ui/ca
 const services = [
   {
     id: 0,
-    icon: "icone1",
-    title: "titulo1",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima hic eligendi beatae quo totam, iste expedita vel accusantium aspernatur molestiae eaque sint aliquam voluptates molestias rem assumenda praesentium ducimus vitae."
+    icon: <NotebookPen className="mt-2" />,
+    title: "FACIL DE AGENDAMENTO",
+    description: "Agendar um corte de cabelo nunca foi tão fácil! Com nossa plataforma intuitiva e amigável, você pode marcar seu próximo corte de cabelo em apenas alguns cliques. Escolha seu barbeiro preferido, selecione o horário que melhor se adequa à sua agenda e pronto! Sem complicações, sem espera."
   },
 
   {
     id: 1,
-    icon: "icone2",
-    title: "titulo2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima hic eligendi beatae quo totam, iste expedita vel accusantium aspernatur molestiae eaque sint aliquam voluptates molestias rem assumenda praesentium ducimus vitae."
+    icon: <Sparkles className="mt-2 size-8" />,
+    title: "AVALIAÇÕES",
+    description: "Confie na opinião de milhares de clientes satisfeitos que já experimentaram os serviços de barbearia através da nossa plataforma. Com avaliações transparentes e recomendações genuínas, você pode escolher seu próximo estabelecimento ou profissional com total confiança e tranquilidade."
   },
 
   {
@@ -52,14 +53,15 @@ const ServicesSection = () => {
           <CarouselItem key={card.id}>
             <Card className="min-w-full max-w-full rounded-2xl">
               <CardContent className="px-1 py-0 pt-1">
+                <div className="flex flex-col items-center justify-center  px-2 pb-3 ">
 
-
-                <div className="px-2 pb-3">
-                  <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap text-center">
+                  <h2 className="flex items-center font-bold mt-2 mb-2 overflow-hidden text-ellipsis text-nowrap">
+                    {card.icon}
                     {card.title}
+
                   </h2>
 
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-center text-gray-400">
                     {card.description}
                   </p>
                 </div>
