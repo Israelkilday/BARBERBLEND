@@ -62,7 +62,7 @@ export default async function Home() {
           <div className="mt-6 px-5 lg:px-0">
             {confirmedBookings.length > 0 && (
               <>
-                <h2 className="text-xs mb-3 uppercase text-gray-400 font-bold lg:pl-0 md:text-lg">
+                <h2 className="text-sm mb-3 uppercase text-gray-400 font-bold lg:pl-0 md:text-lg">
                   Agendamentos
                 </h2>
 
@@ -88,7 +88,7 @@ export default async function Home() {
         </div>
 
         <div className="mt-6 lg:w-[55%] lg:mt-0">
-          <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold lg:px-0 md:text-lg">
+          <h2 className="px-5 text-sm mb-3 uppercase text-gray-400 font-bold lg:px-0 md:text-lg">
             Recomendados
           </h2>
 
