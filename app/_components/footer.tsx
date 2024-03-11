@@ -4,9 +4,15 @@ import Link from "next/link";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
+
 const Footer = () => {
     return (
-
         <footer className="flex flex-col" >
             <div className="w-full flex flex-col justify-between lg:flex-row bg-secondary py-6 px-5 lg:px-32">
                 <div className="flex flex-col gap-5 items-start justify-center md:justify-start pb-5 mt-5">
@@ -89,10 +95,14 @@ const Footer = () => {
                 </div>
             </div>
             
-            <div className="px-5 lg:px-32 py-6 border-t border-gray-700 bg-secondary">
+            <div className="flex items-center justify-between px-5 lg:px-32 py-6 border-t border-gray-700 bg-secondary">
                 <p className="text-gray-400 text-xs font-bold opacity-75 md:text-base">
                     © 2024 ISRAEL KILDAY - Todos os direitos reservados
                 </p>
+                
+                <button>
+                    x
+                </button>
             </div>
         </footer>
     );

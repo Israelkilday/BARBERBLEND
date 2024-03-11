@@ -139,7 +139,7 @@ export default async function Home() {
         </Carousel >
       </div>
 
-      <div className="mt-6 mb-[4.5rem] lg:px-32 lg:mt-0  ">
+      <div className="mt-6 lg:mb-[4.5rem] lg:px-32 lg:mt-0  ">
         <h2 className="px-5 text-xs lg:text-center mb-3 uppercase text-gray-400 font-bold md:text-lg lg:text-2xl lg:px-0">
           Nossa Galeria
         </h2>
@@ -194,7 +194,7 @@ export default async function Home() {
 
       <div className="mt-6 mb-[4.5rem] lg:px-32 lg:mt-0  ">
         <h2 className="px-5 text-xs lg:text-center mb-3 uppercase text-gray-400 font-bold md:text-lg lg:text-2xl lg:px-0">
-          Depoimentos
+          Conheça nossos destaques
         </h2>
         
           <ServicesSection />
