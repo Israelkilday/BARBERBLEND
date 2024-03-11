@@ -20,11 +20,11 @@ const Header = () => {
             <Card>
                 <CardContent className="p-5 justify-between items-center flex flex-row lg:px-32">
                     <Link href="/" className="flex items-center gap-1 p-2 rounded-md hover:bg-accent font-bold duration-300 outline-none">
-                        <Scissors className="font-bold" />
+                        <Scissors className="font-bold text-purple-500" />
                         
-                        <h2 className="text-purple-500 md:text-lg font-berkshire-swash">BARBERBLEND</h2>
+                        <h2 className="md:text-lg font-berkshire-swash">BARBERBLEND</h2>
                         
-                        <Scissors className="font-bold trasform rotate-180" />
+                        <Scissors className="font-bold text-purple-500 trasform rotate-180" />
                     </Link>
 
                     {data?.user ? (

@@ -39,7 +39,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
     const [isDeleteLoading, setIsDeleteLoading] = useState(false);
 
     const isBookingConfirmed = isFuture(booking.date);
-    // 
+     
     const handleCancelClick = async () => {
         setIsDeleteLoading(true)
 
@@ -59,12 +59,12 @@ const BookingItem = ({ booking }: BookingItemProps) => {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Card className="min-w-full md:min-w-96">
-                    <CardContent className="py-0 flex px-0">
+                <Card className="md:min-w-96">
+                    <CardContent className="py-0 w-80 flex px-0">
                         <div className="flex flex-col gap-2 py-5 flex-[3] pl-5">
                             <Badge
                                 variant={isBookingConfirmed ? "default" : "secondary"}
-                                className="w-fit md:text-base"
+                                className="w-fit md:text-base font-bold"
                             >
                                 {isBookingConfirmed ? "Confirmado" : "Finalizado"}
                             </Badge>

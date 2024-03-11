@@ -8,6 +8,7 @@ import BarbershopItem from "./_components/barbershop-item";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../_lib/auth";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../_components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image";
 import ServicesSection from "./_components/servicesSection";
 
@@ -70,9 +71,9 @@ export default async function Home() {
                   opts={{
                     loop: true,
                   }}
-                  className="flex gap-3 lg:w-96  md:w-3/5 lg:px-0"
+                  className="flex gap-3 w-full md:w-3/5 lg:w-96 lg:px-0"
                 >
-                  <CarouselContent className="w-11/12 md:w-full">
+                  <CarouselContent className={confirmedBookings.length <= 1 ? "min-w-full" : "w-11/12 md:w-full"}>
                     {confirmedBookings.map(booking => (
                       <CarouselItem key={booking.id}>
                         <BookingItem booking={booking} />
@@ -196,8 +197,8 @@ export default async function Home() {
         <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
           Conheça nossos destaques
         </h2>
-        
-          <ServicesSection />
+
+        <ServicesSection />
       </div>
     </div >
   );
