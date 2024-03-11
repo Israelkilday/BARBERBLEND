@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        'berkshire-swash': ["Berkshire Swash", "serif"],
+      },
       backgroundImage: {
         "barbershop_banner": "url(/banner.jpeg)"
       },
