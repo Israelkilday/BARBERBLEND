@@ -12,21 +12,18 @@ const services = [
     title: "AGENDAMENTO FACILITADO",
     description: "Agendar um corte de cabelo nunca foi tão fácil! Com nossa plataforma intuitiva e amigável, você pode marcar seu próximo corte de cabelo em apenas alguns cliques. Escolha seu barbeiro preferido, selecione o horário que melhor se adequa à sua agenda e pronto! Sem complicações, sem espera."
   },
-
   {
     id: 1,
     icon: <Award className="size-8" />,
     title: "ATENDIMENTO VIP",
     description: "Valorizamos cada cliente e oferecemos um atendimento personalizado para atender às suas necessidades específicas. Nossa equipe é treinada para entender suas preferências individuais e oferecer sugestões personalizadas para o seu estilo, garantindo uma experiência única e satisfatória em nossa barbearia."
   },
-
   {
     id: 2,
     icon: <UserRoundCheck className="size-8" />,
     title: "EQUIPE ESPECIALIZADA",
     description: "Nossa equipe é composta por profissionais altamente qualificados e apaixonados pelo que fazem. Com anos de experiência no ramo da beleza masculina, estamos aqui para oferecer a você serviços de qualidade e um atendimento excepcional.Desde cortes clássicos até as últimas tendências em barbearia."
   },
-
   {
     id: 3,
     icon: <Sparkles className="size-8" />,
@@ -39,10 +36,6 @@ const services = [
 const ServicesSection = () => {
   return (
     <Carousel
-      // opts={{
-      //   align: "start",
-      //   loop: true,
-      // }}
       plugins={[
         Autoplay({
           delay: 3000,
@@ -53,7 +46,7 @@ const ServicesSection = () => {
       <CarouselContent className="w-11/12 lg:w-1/2">
         {services.map(card => (
           <CarouselItem key={card.id}>
-            <Card className="min-w-full max-w-full rounded-2xl h-60 md:h-40 lg:h-[214px]">
+            <Card className="min-w-full max-w-full rounded-2xl h-[250px] md:h-40 lg:h-[214px]">
               <CardContent className="px-1 py-0 pt-1">
                 <div className="flex gap-1 flex-col items-start px-2 pb-3 ">
 

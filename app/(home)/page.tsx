@@ -114,13 +114,13 @@ export default async function Home() {
           style={{
             objectFit: "cover",
           }}
-          className="-z-30 opacity-30 grayscale hidden lg:flex max-h-[600px]"
+          className="-z-30 opacity-40 grayscale hidden lg:flex max-h-[600px]"
         />
       </div >
 
       {/* mb-[4.5rem] */}
       <div className="mt-6 lg:mt-16 lg:px-32 lg:py-16 ">
-        <h2 className="px-5 text-xs mb-3 uppercase text-gray-400 font-bold md:text-lg lg:text-center lg:text-2xl lg:px-0">
+        <h2 className="px-5 text-sm mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-center lg:text-[26px] lg:px-0">
           Escolha sua Barbearia
         </h2>
 
@@ -140,7 +140,7 @@ export default async function Home() {
       </div>
 
       <div className="mt-6 lg:mb-[4.5rem] lg:px-32 lg:mt-0  ">
-        <h2 className="px-5 text-xs lg:text-center mb-3 uppercase text-gray-400 font-bold md:text-lg lg:text-2xl lg:px-0">
+        <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
           Nossa Galeria
         </h2>
 
@@ -148,26 +148,26 @@ export default async function Home() {
           <div className="flex w-full gap-3">
             <div className="flex flex-col w-full gap-3 overflow-hidden">
 
-              <div className="flex overflow-hidden">
+              <div className="flex overflow-hidden rounded-lg">
                 <img src="/image_galery_1.jpg" alt="teste" className="object-cover w-full h-40 hover:scale-105 hover:opacity-30 duration-200" />
               </div>
 
-              <div className="flex overflow-hidden">
+              <div className="flex overflow-hidden rounded-lg">
                 <img src="/image_galery_2.jpg" alt="teste" className="object-cover w-full h-40 hover:scale-105 hover:opacity-30 duration-200" />
               </div>
             </div>
 
             <div className="flex gap-3 overflow-hidden">
-              <div className="flex gap-3 overflow-hidden">
+              <div className="flex gap-3 overflow-hidden rounded-lg">
                 <img src="/teste.jpeg" alt="teste" className="object-cover h-[332px] w-[350px] md:w-[1000px] hover:scale-105 hover:opacity-30 duration-200" />
               </div>
 
               <div className="flex flex-col gap-3 overflow-hidden">
-                <div className="flex overflow-hidden">
+                <div className="flex overflow-hidden rounded-lg">
                   <img src="/image_galery_4.jpg" alt="image_4" className="object-cover h-28 w-full md:w-[1400px] hover:scale-105 hover:opacity-30 duration-200" />
                 </div>
 
-                <div className="flex overflow-hidden">
+                <div className="flex overflow-hidden rounded-lg">
                   <img src="/image_galery_5.jpg" alt="teste" className="object-cover h-[208px] w-full  hover:scale-105 hover:opacity-30 duration-200" />
                 </div>
               </div>
@@ -175,16 +175,16 @@ export default async function Home() {
           </div>
 
           <div className="flex w-full gap-3">
-            <div className="flex w-full gap-3 overflow-hidden">
+            <div className="flex w-full gap-3 overflow-hidden rounded-lg">
               <img src="/image_galery_6.jpg" alt="image_6" className="object-cover w-full h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
             </div>
 
             <div className="flex flex-col md:flex-row w-full md:w-[3000px] gap-3 overflow-hidden">
-              <div className="flex w-full md:w-[2500px] gap-3 overflow-hidden">
+              <div className="flex w-full md:w-[2500px] gap-3 overflow-hidden rounded-lg">
                 <img src="image_galery_7.jpg" alt="teste" className="object-cover w-full h-40 md:h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
               </div>
 
-              <div className="flex w-full gap-3 overflow-hidden">
+              <div className="flex w-full gap-3 overflow-hidden rounded-lg">
                 <img src="image_galery_8.jpg" alt="teste" className="object-cover w-full h-40 md:h-[332px] hover:scale-105 hover:opacity-30 duration-200" />
               </div>
             </div>
@@ -193,7 +193,7 @@ export default async function Home() {
       </div >
 
       <div className="mt-6 mb-[4.5rem] lg:px-32 lg:mt-0  ">
-        <h2 className="px-5 text-xs lg:text-center mb-3 uppercase text-gray-400 font-bold md:text-lg lg:text-2xl lg:px-0">
+        <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
           Conheça nossos destaques
         </h2>
         
