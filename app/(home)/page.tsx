@@ -114,7 +114,7 @@ export default async function Home() {
           style={{
             objectFit: "cover",
           }}
-          className="-z-30  grayscale hidden lg:flex max-h-[600px]"
+          className="-z-30 opacity-40 grayscale hidden lg:flex max-h-[600px]"
         />
       </div >
 

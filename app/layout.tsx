@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <body className={`${inter.className} dark`}> */}
-      <body className={`${inter.className} white`}>
+      <body className={`${inter.className} dark`}>
         <AuthProvider>
           <div className="flex-1">
             {children}
