@@ -60,7 +60,7 @@ export default async function Home() {
             <Search />
           </div>
 
-          <div className="mt-6 px-5 lg:px-0">
+          <div className="mt-6 pl-5 pr-0  lg:px-0">
             {confirmedBookings.length > 0 && (
               <>
                 <h2 className="text-sm mb-3 uppercase text-gray-400 font-bold lg:pl-0 md:text-lg">
@@ -71,9 +71,10 @@ export default async function Home() {
                   opts={{
                     loop: true,
                   }}
-                  className="flex gap-3 w-full md:w-3/5 lg:w-96 lg:px-0"
+                  className="flex gap-3 md:w-3/5 lg:w-96 lg:px-0"
                 >
-                  <CarouselContent className={confirmedBookings.length <= 1 ? "min-w-full" : "w-11/12 md:w-full"}>
+                  {/* <CarouselContent className={confirmedBookings.length <= 1 ? "w-full" : "w-11/12 md:w-full"}> */}
+                  <CarouselContent className="w-11/12 md:w-full">
                     {confirmedBookings.map(booking => (
                       <CarouselItem key={booking.id}>
                         <BookingItem booking={booking} />

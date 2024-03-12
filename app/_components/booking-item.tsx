@@ -59,8 +59,8 @@ const BookingItem = ({ booking }: BookingItemProps) => {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Card className="md:min-w-96">
-                    <CardContent className="py-0 w-80 flex px-0">
+                <Card className="w-full">
+                    <CardContent className="py-0 w-full flex px-0">
                         <div className="flex flex-col gap-2 py-5 flex-[3] pl-5">
                             <Badge
                                 variant={isBookingConfirmed ? "default" : "secondary"}
