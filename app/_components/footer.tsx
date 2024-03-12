@@ -49,17 +49,17 @@ const Footer = () => {
                     <div className="flex flex-col">
                         <h3 className="md:pl-5">DEPARTAMENTOS</h3>
                         <div className="flex items-center gap-1 group">
-                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200" />
+                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200 text-purple-500" />
                             <p className="text-gray-400">Serviços</p>
                         </div>
 
                         <div className="flex items-center gap-1 group">
-                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200" />
+                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200 text-purple-500" />
                             <p className="text-gray-400">Agendamentos</p>
                         </div>
 
                         <div className="flex items-center gap-1 group">
-                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200" />
+                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200 text-purple-500" />
                             <p className="text-gray-400">Barbearias Recomendadas</p>
                         </div>
                     </div>
@@ -67,17 +67,17 @@ const Footer = () => {
                     <div className="flex flex-col">
                         <h3 className="md:pl-5">INSTITUCIONAL</h3>
                         <div className="flex items-center gap-1 group">
-                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200" />
+                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200 text-purple-500" />
                             <p className="text-gray-400">Sobre a BARBERBLEND</p>
                         </div>
 
                         <div className="flex items-center gap-1 group">
-                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200" />
+                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200 text-purple-500" />
                             <p className="text-gray-400">Termos e condições</p>
                         </div>
 
                         <div className="flex items-center gap-1 group">
-                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200" />
+                            <Scissors className="size-4 opacity-0 group-hover:opacity-100 duration-200 text-purple-500" />
                             <p className="text-gray-400">Política de segurança e privacidade</p>
                         </div>
                     </div>
@@ -85,12 +85,12 @@ const Footer = () => {
                     <div className="flex flex-col">
                         <h3 className="md:pl-5">CONTATO</h3>
                         <div className="flex items-center gap-1">
-                            <Phone className="size-4" />
+                            <Phone className="size-4 text-purple-500" />
                             <p className="text-gray-400">(85) 91234 5678</p>
                         </div>
 
                         <div className="flex items-center gap-1">
-                            <Headset className="size-4" />
+                            <Headset className="size-4 text-purple-500" />
                             <p className="text-gray-400">SAC - 0800 1234 5678</p>
                         </div>
                     </div>

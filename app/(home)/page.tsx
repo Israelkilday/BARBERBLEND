@@ -74,7 +74,7 @@ export default async function Home() {
                   className="flex gap-3 md:w-3/5 lg:w-96 lg:px-0"
                 >
                   {/* <CarouselContent className={confirmedBookings.length <= 1 ? "w-full" : "w-11/12 md:w-full"}> */}
-                  <CarouselContent className="w-11/12 md:w-full">
+                  <CarouselContent className="w-11/12 md:w-full cursor-pointer">
                     {confirmedBookings.map(booking => (
                       <CarouselItem key={booking.id}>
                         <BookingItem booking={booking} />
@@ -120,8 +120,15 @@ export default async function Home() {
         />
       </div >
 
-      {/* mb-[4.5rem] */}
-      <div className="mt-6 lg:mt-16 lg:px-32 lg:py-16 ">
+      <div className="mt-6 lg:mt-16 lg:px-32">
+        <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0 lg:pt-16">
+          Conheça nossos destaques
+        </h2>
+
+        <ServicesSection />
+      </div>
+
+      <div className="mt-6 lg:mt-16 lg:px-32">
         <h2 className="px-5 text-sm mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-center lg:text-[26px] lg:px-0">
           Escolha sua Barbearia
         </h2>
@@ -141,7 +148,7 @@ export default async function Home() {
         </Carousel >
       </div>
 
-      <div className="mt-6 lg:mb-[4.5rem] lg:px-32 lg:mt-0  ">
+      <div className="mt-6 lg:mt-16 mb-16 lg:mb-24 lg:px-32">
         <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
           Nossa Galeria
         </h2>
@@ -193,14 +200,6 @@ export default async function Home() {
           </div>
         </section>
       </div >
-
-      <div className="mt-6 mb-[4.5rem] lg:px-32 lg:mt-0  ">
-        <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
-          Conheça nossos destaques
-        </h2>
-
-        <ServicesSection />
-      </div>
     </div >
   );
 };
