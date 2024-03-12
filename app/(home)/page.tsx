@@ -82,7 +82,7 @@ export default async function Home() {
                     ))}
                   </CarouselContent>
 
-                  {confirmedBookings.length > 1 ? (<CarouselNext className="hidden md:flex lg:-right-[15px]" />) : null}
+                  {confirmedBookings.length > 1 ? (<CarouselNext className="hidden md:flex lg:-right-[24px]" />) : null}
                 </Carousel>
               </>
             )}
