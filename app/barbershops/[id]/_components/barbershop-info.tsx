@@ -28,43 +28,57 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                 <Header />
             </div>
 
-            <div className="h-[250px] w-full relative">
-                <Button
-                    size="icon"
-                    variant="outline"
-                    onClick={handleBackClick}
-                    className="z-50 absolute top-4 left-4"
-                >
-                    <ChevronLeftIcon />
-                </Button>
+            {/* border-b border-solid border-secondary */}
 
-                <Image
-                    fill
-                    src={barbershop.imageUrl}
-                    alt={barbershop.name}
-                    style={{
-                        objectFit: "cover",
-                    }}
-                    className="opacity-75"
-                />
-            </div>
+            <div>
+                <div className="px-5 mb-3    ">
+                    <h1 className="text-xl font-bold">{barbershop.name}</h1>
 
-            <div className="px-5 pt-3 pb-6 border-b border-solid border-secondary">
-                <h1 className="text-xl font-bold ">{barbershop.name}</h1>
-                <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-1 mt-2">
-                        <MapPinIcon className="text-primary" size={18} />
+                    <div className="flex flex-col gap-2">
+                        <div className="flex items-center gap-1 mt-2">
+                            <MapPinIcon className="text-primary" size={18} />
 
-                        <p className="text-sm">{barbershop.address}</p>
+                            <p className="text-sm">{barbershop.address}</p>
+                        </div>
+
+                        <div className="flex gap-1 items-center">
+                            <StarIcon className="text-primary" size={18} />
+
+                            <p className="text-sm">5,0 (899 avaliações)</p>
+                        </div>
                     </div>
+                </div>
 
-                    <Card className="w-48">
-                        <CardContent className="pl-3 p-4 justify-center">
-                            <div className="flex gap-1 m-auto items-center">
-                                <StarIcon className="text-primary" size={18} />
+                <div className="h-[250px] w-full relative mb-6">
+                    <Button
+                        size="icon"
+                        variant="outline"
+                        onClick={handleBackClick}
+                        className="z-50 absolute top-4 left-4"
+                    >
+                        <ChevronLeftIcon />
+                    </Button>
 
-                                <p className="text-sm">5,0 (899 avaliações)</p>
-                            </div>
+                    <Image
+                        fill
+                        src={barbershop.imageUrl}
+                        alt={barbershop.name}
+                        style={{
+                            objectFit: "cover",
+                        }}
+                        className="opacity-75"
+                    />
+                </div>
+
+                <div className="px-5">
+                    <h2 className="text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0 lg:pt-16">
+                        SOBRE NOS
+                    </h2>
+                    <Card className="">
+                        <CardContent className="p-5 md:p-4 justify-center">
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae quod tempore sapiente natus, alias libero hic repellat eius in sequi ut molestiae saepe accusantium magni aspernatur optio cupiditate sint accusamus.
+                            </p>
                         </CardContent>
                     </Card>
                 </div>
