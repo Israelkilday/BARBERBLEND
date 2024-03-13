@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Button } from "@/app/_components/ui/button";
 import { Barbershop } from "@prisma/client";
 import { useRouter } from "next/navigation";
+import Header from "@/app/_components/header";
 
 interface BarbershopInfoProps {
     barbershop: Barbershop
@@ -22,6 +23,8 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
 
     return (
         <div>
+            <Header />
+            
             <div className="h-[250px] w-full relative">
                 <Button
                     size="icon"
@@ -31,18 +34,6 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                 >
                     <ChevronLeftIcon />
                 </Button>
-
-                <Sheet>
-                    <SheetTrigger asChild>
-                        <Button size="icon" variant="outline" className="z-50 absolute top-4 right-4">
-                            <MenuIcon />
-                        </Button>
-                    </SheetTrigger>
-
-                    <SheetContent className="p-0">
-                        <SideMenu />
-                    </SheetContent>
-                </Sheet>
 
                 <Image
                     fill
