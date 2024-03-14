@@ -41,19 +41,23 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                 <Header />
             </div>
 
-            <div className="lg:flex lg:mt-16 lg:px-32 gap-5">
-                <div className="lg:min-w-[40%]">
-                    <div className="md:flex justify-between px-5 lg:px-32 border-b border-solid border-secondary mb-3">
-                        <h1 className="text-xl pb-2 lg:text-3xl font-bold ">
-                            {barbershop.name}
-                        </h1>
+            <div className="px-5 lg:px-32">
+                <div className="md:flex justify-between border-b border-solid border-secondary mb-3 pb-3 lg:mt-16">
+                    <h1 className="text-xl pb-2 lg:text-3xl font-bold ">
+                        {barbershop.name}
+                    </h1>
 
-                        <div className="flex gap-1 items-center md:p-3 md:border border-solid border-secondary rounded-lg">
-                            <StarIcon className="text-primary" size={20} />
+                    <div className="flex gap-1 items-center w-fit p-3 border border-solid border-secondary rounded-lg">
+                        <StarIcon className="text-primary" size={20} />
 
-                            <p className="text-sm lg:text-base">5,0 (899 avaliações)</p>
-                        </div>
+                        <p className="text-sm lg:text-base">5,0 (899 avaliações)</p>
                     </div>
+                </div>
+            </div>
+
+            <div className="lg:flex lg:mt- lg:px-32 gap-5">
+                <div className="lg:min-w-[40%]">
+
 
                     <div className="px-5 mb-3 lg:px-0">
 
@@ -131,7 +135,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                                     <Phone className="size-4 text-purple-500 font-bold" />
                                     (85) 1234 5678
                                 </p>
-                                
+
                                 <Button onClick={handleCopy} className="flex gap-1 bg-none px-3 h-8">
                                     Copiar
                                     <Copy className="size-4" />
@@ -143,7 +147,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                                     <Smartphone className="size-4 text-purple-500 font-bold" />
                                     (85) 91234 5678
                                 </p>
-                                
+
                                 <Button onClick={handleCopy} className="flex gap-1 bg-none px-3 h-8">
                                     Copiar
                                     <Copy className="size-4" />
