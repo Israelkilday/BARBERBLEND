@@ -41,8 +41,8 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                 <Header />
             </div>
 
-            <div className="px-5 lg:px-32">
-                <div className="md:flex justify-between border-b border-solid border-secondary mb-3 pb-3 lg:mt-16">
+            <div className="px-5 lg:px-32 lg:mb-5">
+                <div className="md:flex justify-between border-b border-solid border-secondary pb-3 lg:mt-16">
                     <h1 className="text-xl pb-2 lg:text-3xl font-bold ">
                         {barbershop.name}
                     </h1>
@@ -55,12 +55,9 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                 </div>
             </div>
 
-            <div className="lg:flex lg:mt- lg:px-32 gap-5">
-                <div className="lg:min-w-[40%]">
-
-
-                    <div className="px-5 mb-3 lg:px-0">
-
+            <div className="lg:flex lg:px-32 gap-5">
+                <div className="lg:min-w-[30%]">
+                    <div className="px-5 mb-3 mt-3 lg:mt-3 lg:px-0">
                         <div className="flex flex-col md:flex-row gap-2 mt-2 justify-between">
                             <div className="flex items-center gap-1 ">
                                 <MapPinIcon className="text-primary font-bold" size={20} />
@@ -87,18 +84,18 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                             style={{
                                 objectFit: "cover",
                             }}
-                            className="opacity-75 md:max-w-[95%] md:mx-5 md:rounded-xl lg:mx-0 lg:min-w-[100%]"
+                            className="opacity-75 h-auto md:max-w-[95%] md:mx-5 md:rounded-3xl lg:mx-0 lg:min-w-[100%] lg:min-h-[459px]"
                         />
                     </div>
                 </div>
 
-                <div className="px-5">
-                    <h2 className="text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0 lg:pt-16">
-                        SOBRE NÓS
-                    </h2>
-
+                <div className="px-5 lg:mt-[47px]">
                     <Card className="">
-                        <CardContent className="p-5 md:p-4 justify-center">
+                        <CardContent className="p-5 md:p-4 lg justify-center">
+                            <h2 className="text-sm lg:text-center pb-3 mt mb-3 lg:mb-6 uppercase text-gray-400 font-bold border-b border-solid border-secondary md:px-5 md:text-lg lg:text-[26px] lg:px-0">
+                                SOBRE NÓS
+                            </h2>
+
                             <p className="pb-3 text-sm text-gray-400 border-b border-solid border-secondary mb-3 md:px-5">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae quod tempore sapiente natus, alias libero hic repellat eius in sequi ut molestiae saepe accusantium magni aspernatur optio cupiditate sint accusamus.
                             </p>
