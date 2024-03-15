@@ -22,17 +22,16 @@ interface BarbershopInfoProps {
 const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
     const router = useRouter();
 
-
+    const handleBackClick = () => {
+        router.replace("/");
+    };
+    
     const [copied, copyToClipboard] = useCopyToClipboard();
 
     const handleCopy = () => {
         copyToClipboard("(85) 1234 5678");
         copyToClipboard("(85) 91234 5678");
         toast.success("Número de Telefone copiado com sucesso!");
-    };
-
-    const handleBackClick = () => {
-        router.replace("/");
     };
 
     return (
@@ -96,8 +95,8 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                                 SOBRE NÓS
                             </h2>
 
-                            <p className="pb-3 text-sm text-gray-400 border-b border-solid border-secondary mb-3 md:px-5">{barbershop.description}
-                                {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae quod tempore sapiente natus, alias libero hic repellat eius in sequi ut molestiae saepe accusantium magni aspernatur optio cupiditate sint accusamus. */}
+                            <p className="pb-3 text-sm text-gray-400 border-b border-solid border-secondary mb-3 md:px-5">
+                                {barbershop.description}
                             </p>
 
                             <h2 className="flex gap-2 items-center font-bold mt-2 mb-2 overflow-hidden text-ellipsis text-nowrap md:px-5 lg:text-lg">

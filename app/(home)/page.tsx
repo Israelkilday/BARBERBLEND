@@ -73,7 +73,6 @@ export default async function Home() {
                   }}
                   className="flex gap-3 md:w-3/5 lg:w-96 lg:px-0"
                 >
-                  {/* <CarouselContent className={confirmedBookings.length <= 1 ? "w-full" : "w-11/12 md:w-full"}> */}
                   <CarouselContent className="w-11/12 md:w-full cursor-pointer">
                     {confirmedBookings.map(booking => (
                       <CarouselItem key={booking.id}>
@@ -116,7 +115,7 @@ export default async function Home() {
           style={{
             objectFit: "cover",
           }}
-          className="-z-30 opacity-40 grayscale hidden lg:flex max-h-[600px]"
+          className="-z-30 opacity-40 grayscale hidden lg:flex max-h-[560px]"
         />
       </div >
 
@@ -148,7 +147,7 @@ export default async function Home() {
         </Carousel >
       </div>
 
-      <div className="mt-6 lg:mt-16 mb-16 lg:mb-24 lg:px-32">
+      <div className="mt-6 mb-10 lg:my-16 lg:px-32">
         <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
           Nossa Galeria
         </h2>

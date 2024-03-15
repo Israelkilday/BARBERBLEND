@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { db } from "../_lib/prisma";
 import BookingItem from "../_components/booking-item";
 import { authOptions } from "../_lib/auth";
+import { Annoyed } from "lucide-react";
 
 const BookingsPage = async () => {
     const session = await getServerSession(authOptions);
@@ -39,13 +40,13 @@ const BookingsPage = async () => {
             },
         }),
     ]);
-
+    
     return (
         <>
             <Header />
 
-            <div className="px-5 py-6">
-                <h1 className="text-xl font-bold mb-6">Agendamentos</h1>
+            <div className="px-5 lg:px-32 py-6 lg:py-10">
+                <h1 className="text-xl lg:text-3xl font-bold mb-6">Agendamentos</h1>
 
                 {confirmedBookings.length > 0 && (
                     <>
@@ -60,6 +61,15 @@ const BookingsPage = async () => {
                             ))}
                         </div>
                     </>
+                )}
+
+                {confirmedBookings.length === 0 && (
+                    <div className="">
+                        <h2 className="flex gap-2 text-gray-400">
+                            <Annoyed className="text-purple-500" />
+                            Ops! Você ainda Não possui Agendamentos.
+                        </h2>
+                    </div>
                 )}
 
                 {finishedBookings.length > 0 && (
