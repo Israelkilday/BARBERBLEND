@@ -54,6 +54,28 @@ async function seedDatabase() {
       "Rua Urbana, 606",
       "Avenida Clássica, 707",
     ];
+    
+    const descriptions = [
+      "Oferecemos cortes de cabelo e barba com um toque nostálgico, combinando técnicas clássicas com um ambiente vintage e acolhedor.",
+      
+      "Especializada em cortes de cabelo e estilos modernos, proporcionando uma experiência personalizada para cada cliente, com profissionais qualificados e produtos de qualidade.",
+      
+      "Concentra-se em serviços de barbearia tradicionais, com ênfase na arte da navalha e no cuidado da barba, garantindo um visual impecável e uma sensação de masculinidade",
+      
+      "Uma barbearia refinada que oferece cortes de cabelo e barba com um toque de elegância e sofisticação, criando looks impecáveis para homens modernos e estilosos",
+      
+      "Um destino completo para cuidados com o cabelo, proporcionando uma variedade de serviços, desde cortes modernos até tratamentos capilares, em um ambiente descontraído e acolhedor",
+      
+      "Uma barbearia com uma abordagem única, combinando a habilidade artesanal da tesoura com a precisão do machado, para criar cortes de cabelo e barba que refletem força e estilo.",
+      
+      "Focada em proporcionar uma experiência de barbearia de luxo, com serviços premium que incluem cortes de cabelo, barba e tratamentos faciais, em um ambiente elegante e confortável.",
+      
+      "Especializada em transformar a aparência dos clientes, oferecendo serviços de barbearia de alta qualidade, com atenção aos detalhes e um compromisso com resultados impecáveis.",
+      
+      "Inspirada na vibração da cidade, esta barbearia oferece cortes de cabelo e barba com um toque urbano e moderno, adaptados ao estilo de vida agitado dos homens da cidade.",
+      
+      "Retorna às raízes da tradição da barbearia, oferecendo serviços clássicos e atemporais, com cortes de cabelo e barba que refletem elegância e estilo refinado."
+    ]
 
     const services = [
       {
@@ -100,12 +122,14 @@ async function seedDatabase() {
       const name = creativeNames[i];
       const address = addresses[i];
       const imageUrl = images[i];
+      const description = descriptions[i];
 
       const barbershop = await prisma.barbershop.create({
         data: {
           name,
           address,
           imageUrl: imageUrl,
+          description: description 
         },
       });
 

@@ -96,8 +96,8 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                                 SOBRE NÓS
                             </h2>
 
-                            <p className="pb-3 text-sm text-gray-400 border-b border-solid border-secondary mb-3 md:px-5">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae quod tempore sapiente natus, alias libero hic repellat eius in sequi ut molestiae saepe accusantium magni aspernatur optio cupiditate sint accusamus.
+                            <p className="pb-3 text-sm text-gray-400 border-b border-solid border-secondary mb-3 md:px-5">{barbershop.description}
+                                {/* Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae quod tempore sapiente natus, alias libero hic repellat eius in sequi ut molestiae saepe accusantium magni aspernatur optio cupiditate sint accusamus. */}
                             </p>
 
                             <h2 className="flex gap-2 items-center font-bold mt-2 mb-2 overflow-hidden text-ellipsis text-nowrap md:px-5 lg:text-lg">
