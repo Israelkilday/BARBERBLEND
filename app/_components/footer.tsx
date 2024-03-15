@@ -97,8 +97,8 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="flex items-center justify-between px-5 lg:px-32 py-6 border-t border-gray-700 bg-secondary">
-                <p className="text-gray-400 text-xs font-bold opacity-75 md:text-base">
+            <div className="flex items-center justify-between px-5 lg:px-32 py-5 border-t border-gray-700 bg-secondary">
+                <p className="text-gray-400 text-sm font-bold opacity-75 md:text-base">
                     © 2024 ISRAEL KILDAY<br className="md:hidden"/> - Todos os direitos reservados
                 </p>
 

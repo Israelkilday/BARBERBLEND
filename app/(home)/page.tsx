@@ -115,12 +115,12 @@ export default async function Home() {
           style={{
             objectFit: "cover",
           }}
-          className="-z-30 opacity-40 grayscale hidden lg:flex max-h-[560px]"
+          className="-z-30 opacity-40 grayscale hidden lg:flex max-h-[570px]"
         />
       </div >
 
-      <div className="mt-6 lg:mt-16 lg:px-32">
-        <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0 lg:pt-16">
+      <div className="mt-6 lg:pt-6 lg:px-32">
+        <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
           Conheça nossos destaques
         </h2>
 
