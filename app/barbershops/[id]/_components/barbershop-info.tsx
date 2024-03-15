@@ -55,7 +55,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
             </div>
 
             <div className="lg:flex lg:px-32 gap-5">
-                <div className="lg:min-w-[30%]">
+                <div className="lg:min-w-[50%]">
                     <div className="px-5 mb-3 mt-3 lg:mt-3 lg:px-0">
                         <div className="flex flex-col md:flex-row gap-2 mt-2 justify-between">
                             <div className="flex items-center gap-1 ">
@@ -83,7 +83,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                             style={{
                                 objectFit: "cover",
                             }}
-                            className="opacity-75 h-auto md:max-w-[95%] md:mx-5 md:rounded-3xl lg:mx-0 lg:min-w-[100%] lg:min-h-[459px]"
+                            className="opacity-75 h-auto md:max-w-[95%] md:mx-5 md:rounded-3xl lg:mx-0 lg:min-w-[100%] lg:min-h-[445px]"
                         />
                     </div>
                 </div>
@@ -91,20 +91,20 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                 <div className="px-5 lg:mt-[47px]">
                     <Card className="">
                         <CardContent className="p-5 md:p-4 lg justify-center">
-                            <h2 className="text-sm lg:text-center pb-3 mt mb-3 lg:mb-6 uppercase text-gray-400 font-bold border-b border-solid border-secondary md:px-5 md:text-lg lg:text-[26px] lg:px-0">
+                            <h2 className="text-sm lg:text-center md:px-5 lg-px-0 pb-3 mb-3 uppercase text-gray-400 font-bold border-b border-solid border-secondary md:text-lg lg:text-[26px] lg:px-0">
                                 SOBRE NÓS
                             </h2>
 
-                            <p className="pb-3 text-sm text-gray-400 border-b border-solid border-secondary mb-3 md:px-5">
+                            <p className="pb-3 text-sm text-gray-400 border-b border-solid border-secondary mb-3 md:px-5 lg:px-0">
                                 {barbershop.description}
                             </p>
 
-                            <h2 className="flex gap-2 items-center font-bold mt-2 mb-2 overflow-hidden text-ellipsis text-nowrap md:px-5 lg:text-lg">
+                            <h2 className="flex gap-2 items-center lg:justify-center font-bold mt-2 mb-2 overflow-hidden text-nowrap md:px-5 lg:px-0 lg:text-lg">
                                 <Clock className="size-6 text-purple-500" />
                                 Horário de funcionamento
                             </h2>
 
-                            <div className="flex justify-between pb-3 border-b border-solid border-secondary mb-3 md:px-5">
+                            <div className="flex justify-between  pb-3 border-b border-solid border-secondary mb-3 md:px-5">
                                 <div>
                                     <p className="text-sm text-gray-400">Domingo</p>
                                     <p className="text-sm text-gray-400">Segunda-Feira</p>
