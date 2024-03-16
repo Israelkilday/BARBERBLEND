@@ -39,7 +39,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
     const [isDeleteLoading, setIsDeleteLoading] = useState(false);
 
     const isBookingConfirmed = isFuture(booking.date);
-     
+
     const handleCancelClick = async () => {
         setIsDeleteLoading(true)
 
@@ -97,7 +97,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
 
             <SheetContent className="px-0">
                 <SheetHeader className="px-5 text-left pb-6 border-b border-solid border-secondary">
-                    <SheetTitle>Informaçoes de Reserva</SheetTitle>
+                    <SheetTitle className="text-xl">Informaçoes de Reserva</SheetTitle>
                 </SheetHeader>
 
                 <div className="px-5">
@@ -119,9 +119,9 @@ const BookingItem = ({ booking }: BookingItemProps) => {
                                     </Avatar>
 
                                     <div>
-                                        <h2 className="font-bold">{booking.barbershop.name}</h2>
+                                        <h2 className="font-bold lg:text-base">{booking.barbershop.name}</h2>
 
-                                        <h3 className="text-xs overflow-hidden text-nowrap text-ellipsis">
+                                        <h3 className="text-xs overflow-hidden text-nowrap text-ellipsis lg:text-sm">
                                             {booking.barbershop.address}
                                         </h3>
                                     </div>
@@ -132,7 +132,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
 
                     <Badge
                         variant={isBookingConfirmed ? "default" : "secondary"}
-                        className="w-fit mt-3 mb-3"
+                        className="w-fit mt-3 mb-3 font-bold lg:text-base"
                     >
                         {isBookingConfirmed ? "Confirmado" : "Finalizado"}
                     </Badge>
@@ -141,7 +141,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
 
                     <SheetFooter className="flex-row gap-3 mt-6">
                         <SheetClose asChild>
-                            <Button className="w-full" variant="secondary">
+                            <Button className="w-full lg:text-base" variant="secondary">
                                 Voltar
                             </Button>
                         </SheetClose>
@@ -150,7 +150,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
                             <AlertDialogTrigger asChild>
                                 <Button
                                     disabled={!isBookingConfirmed || isDeleteLoading}
-                                    className="w-full"
+                                    className="w-full lg:text-base"
                                     variant="destructive"
                                 >
                                     Cancelar Reserva
@@ -159,24 +159,24 @@ const BookingItem = ({ booking }: BookingItemProps) => {
 
                             <AlertDialogContent>
                                 <AlertDialogHeader>
-                                    <AlertDialogTitle>
+                                    <AlertDialogTitle className="lg:text-xl">
                                         Deseja mesmo Cancelar Reserva?
                                     </AlertDialogTitle>
 
-                                    <AlertDialogDescription>
+                                    <AlertDialogDescription className="lg:text-base">
                                         Uma vez cancelada , não será possível reverter esta ação.
                                     </AlertDialogDescription>
                                 </AlertDialogHeader>
 
                                 <AlertDialogFooter className="flex-row gap-3">
                                     <AlertDialogCancel
-                                        className="w-full mt-0"
+                                        className="w-full mt-0 lg:text-base"
                                     >
                                         Voltar
                                     </AlertDialogCancel>
 
                                     <AlertDialogAction
-                                        className="w-full"
+                                        className="w-full lg:text-base"
                                         onClick={handleCancelClick}
                                         disabled={isDeleteLoading}
                                     >
