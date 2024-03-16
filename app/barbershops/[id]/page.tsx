@@ -37,7 +37,11 @@ const BarbershopDetailsPage = async ({ params }: BarbershopDetailsPageProps) => 
         <div>
             <BarbershopInfo barbershop={barbershop} />
 
-            <div className="px-5 flex flex-col gap-4 py-6">
+            <h2 className="px-5 text-sm lg:text-center mb-3 mt-6 lg:mt-16 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px]">
+                NOSSOS SERVIÇOS
+            </h2>
+
+            <div className="px-5  flex flex-col gap-4 mb-6 lg:grid grid-cols-2 lg:px-32 lg:mb-16">
                 {barbershop.services.map((service) => (
                     <ServiceItem
                         key={service.id}
@@ -46,7 +50,12 @@ const BarbershopDetailsPage = async ({ params }: BarbershopDetailsPageProps) => 
                 ))}
             </div>
 
-            <ServicesSection />
+            <div className="mb-6 lg:px-32 lg:mb-16">
+                <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
+                    Conheça nossos destaques
+                </h2>
+                <ServicesSection />
+            </div>
         </div>
     );
 };

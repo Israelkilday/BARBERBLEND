@@ -93,8 +93,8 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                 <div className="px-5 lg:mt-[47px]">
                     <Card className="">
                         <CardContent className="p-5 md:p-4 lg justify-center">
-                            <h2 className="text-sm lg:text-center md:px-5 lg-px-0 pb-3 mb-3 uppercase text-gray-400 font-bold border-b border-solid border-secondary md:text-lg lg:text-[26px] lg:px-0">
-                                SOBRE NÓS
+                            <h2 className="text-sm lg:text-center md:px-5 lg-px-0 pb-3 mb-3 uppercase text-gray-400 font-bold border-b border-solid border-secondary md:text-lg lg:text-2xl lg:px-0">
+                                INFORMAÇÕES
                             </h2>
 
                             <p className="pb-3 text-sm text-gray-400 border-b border-solid border-secondary mb-3 md:px-5 lg:px-0">
