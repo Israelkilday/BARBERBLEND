@@ -175,59 +175,62 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                         <SheetTitle>Fazer Reserva</SheetTitle>
                                     </SheetHeader>
 
-                                    <div className="py-4">
-                                        <Calendar
-                                            mode="single"
-                                            selected={date}
-                                            onSelect={handleDateClick}
-                                            className="mt-0 pt-0 pb-0"
-                                            locale={ptBR}
-                                            fromDate={addDays(new Date(), 1)}
-                                            styles={{
-                                                head_cell: {
-                                                    width: "100%",
-                                                    textTransform: "capitalize",
-                                                },
+                                    <div className="lg:flex lg:px-5">
+                                        <div className="py-4">
+                                            <Calendar
+                                                mode="single"
+                                                selected={date}
+                                                onSelect={handleDateClick}
+                                                className="mt-0 pt-0 pb-0"
+                                                locale={ptBR}
+                                                fromDate={addDays(new Date(), 1)}
+                                                styles={{
+                                                    head_cell: {
+                                                        width: "100%",
+                                                        textTransform: "capitalize",
+                                                    },
 
-                                                cell: {
-                                                    width: "100%"
-                                                },
+                                                    cell: {
+                                                        width: "100%"
+                                                    },
 
-                                                button: {
-                                                    width: "100%"
-                                                },
+                                                    button: {
+                                                        width: "100%"
+                                                    },
 
-                                                nav_button_previous: {
-                                                    width: "32px",
-                                                    height: "32px"
-                                                },
+                                                    nav_button_previous: {
+                                                        width: "32px",
+                                                        height: "32px"
+                                                    },
 
-                                                nav_button_next: {
-                                                    width: "32px",
-                                                    height: "32px"
-                                                },
+                                                    nav_button_next: {
+                                                        width: "32px",
+                                                        height: "32px"
+                                                    },
 
-                                                caption: {
-                                                    textTransform: "capitalize"
-                                                }
-                                            }}
-                                        />
-                                    </div>
-
-                                    {date && (
-                                        <div className="flex gap-3 overflow-x-auto py-4 px-5 border-t border-solid border-secondary [&:: -webkit-scrollbar]:hidden">
-                                            {timeList.map((time) => (
-                                                <Button
-                                                    variant={hour === time ? "default" : "outline"}
-                                                    key={time}
-                                                    className="rounded-full"
-                                                    onClick={() => handleHourClick(time)}
-                                                >
-                                                    {time}
-                                                </Button>
-                                            ))}
+                                                    caption: {
+                                                        textTransform: "capitalize"
+                                                    }
+                                                }}
+                                            />
                                         </div>
-                                    )}
+
+                                        {date && (
+                                            <div className="flex gap-3 overflow-x-auto py-4 px-5 border-t border-solid border-secondary [&:: -webkit-scrollbar]:hidden lg:grid grid-cols-3">
+                                                {timeList.map((time) => (
+                                                    <Button
+                                                        variant={hour === time ? "default" : "outline"}
+                                                        key={time}
+                                                        className="rounded-full"
+                                                        onClick={() => handleHourClick(time)}
+                                                    >
+                                                        {time}
+                                                    </Button>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                    </div>
 
                                     <div className="py-4 px-5 border-t border-solid border-secondary">
                                         <BookingInfo
