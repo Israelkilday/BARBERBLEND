@@ -25,7 +25,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
     const handleBackClick = () => {
         router.replace("/");
     };
-    
+
     const [copied, copyToClipboard] = useCopyToClipboard();
 
     const handleCopy = () => {
@@ -49,7 +49,9 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                     <div className="flex gap-1 items-center w-fit p-3 border border-solid border-secondary rounded-lg">
                         <StarIcon className="text-primary" size={20} />
 
-                        <p className="text-sm lg:text-base">5,0 (899 avaliações)</p>
+                        <p className="text-sm lg:text-base">
+                            {barbershop.ratings} ({barbershop.stars} avaliações)
+                        </p>
                     </div>
                 </div>
             </div>
@@ -158,3 +160,6 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
 }
 
 export default BarbershopInfo;
+
+// npm i --save-dev prisma@latest                       │
+// npm i @prisma/client@latest

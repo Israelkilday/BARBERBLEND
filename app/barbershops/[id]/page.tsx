@@ -3,6 +3,7 @@ import BarbershopInfo from "./_components/barbershop-info";
 import ServiceItem from "./_components/serviceItem";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/_lib/auth";
+import ServicesSection from "./_components/servicesSection";
 
 interface BarbershopDetailsPageProps {
     params: {
@@ -38,12 +39,14 @@ const BarbershopDetailsPage = async ({ params }: BarbershopDetailsPageProps) => 
 
             <div className="px-5 flex flex-col gap-4 py-6">
                 {barbershop.services.map((service) => (
-                    <ServiceItem 
-                    key={service.id} 
-                    barbershop={barbershop}
-                    service={service} isAuthenticated={!!session?.user} />
+                    <ServiceItem
+                        key={service.id}
+                        barbershop={barbershop}
+                        service={service} isAuthenticated={!!session?.user} />
                 ))}
             </div>
+
+            <ServicesSection />
         </div>
     );
 };

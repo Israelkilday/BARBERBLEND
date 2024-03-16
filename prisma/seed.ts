@@ -55,6 +55,10 @@ async function seedDatabase() {
       "Avenida Clássica, 707",
     ];
     
+    const stars = ["500","477","480","466","491","750","810","600","590,","546"];
+    
+    const ratings = ["5.0","4.7","4.8","4.6","4.9","4.5","5.0","4.9","4.7,","4.8"];
+    
     const descriptions = [
       "Oferecemos cortes de cabelo e barba com um toque nostálgico, combinando técnicas clássicas com um ambiente vintage e acolhedor.",
       
@@ -75,8 +79,8 @@ async function seedDatabase() {
       "Inspirada na vibração da cidade, esta barbearia oferece cortes de cabelo e barba com um toque urbano e moderno, adaptados ao estilo de vida agitado dos homens da cidade.",
       
       "Retorna às raízes da tradição da barbearia, oferecendo serviços clássicos e atemporais, com cortes de cabelo e barba que refletem elegância e estilo refinado."
-    ]
-
+    ];
+    
     const services = [
       {
         name: "Corte de Cabelo",
@@ -123,13 +127,17 @@ async function seedDatabase() {
       const address = addresses[i];
       const imageUrl = images[i];
       const description = descriptions[i];
+      const star = stars[i];
+      const rating = ratings[i];
 
       const barbershop = await prisma.barbershop.create({
         data: {
           name,
           address,
           imageUrl: imageUrl,
-          description: description 
+          description: description,
+          ratings: rating,
+          stars: star, 
         },
       });
 
