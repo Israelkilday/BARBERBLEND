@@ -171,11 +171,11 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                 </SheetTrigger>
 
                                 <SheetContent className="p-0">
-                                    <SheetHeader className="text-left px-5 py-5 border-b border-solid border-secondary">
+                                    <SheetHeader className="text-left px-5 py-5 border-b border-solid border-secondary lg:hidden">
                                         <SheetTitle>Fazer Reserva</SheetTitle>
                                     </SheetHeader>
 
-                                    <div className="lg:flex lg:px-5">
+                                    <div className="lg:flex lg:px-0 lg:pt-5">
                                         <div className="py-4">
                                             <Calendar
                                                 mode="single"
@@ -216,7 +216,7 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                         </div>
 
                                         {date && (
-                                            <div className="flex gap-3 overflow-x-auto py-4 px-5 border-t border-solid border-secondary [&:: -webkit-scrollbar]:hidden lg:grid grid-cols-3">
+                                            <div className="flex gap-3 overflow-x-auto py-4 px-5 border-t border-solid border-secondary lg:border-none [&:: -webkit-scrollbar]:hidden lg:grid grid-cols-3">
                                                 {timeList.map((time) => (
                                                     <Button
                                                         variant={hour === time ? "default" : "outline"}
