@@ -15,10 +15,10 @@ const BookingInfo = ({ booking }: BookingItemProps) => {
         <Card>
             <CardContent className="px-3 py-3  gap-3 flex flex-col">
                 <div className="flex justify-between">
-                    <h2 className="font-bold">
+                    <h2 className="font-bold lg:text-base">
                         {booking.Service.name}
                     </h2>
-                    <h3 className="font-bold text-sm">
+                    <h3 className="font-bold text-sm lg:text-base">
                         {""}
                         {Intl.NumberFormat("pt-BR", {
                             style: "currency",
@@ -30,11 +30,11 @@ const BookingInfo = ({ booking }: BookingItemProps) => {
                 {booking.date && (
                     <>
                         <div className="flex justify-between">
-                            <h3 className="text-gray-400 text-sm">
+                            <h3 className="text-gray-400 text-sm lg:text-base">
                                 Data
                             </h3>
 
-                            <h4 className="text-sm">
+                            <h4 className="text-sm lg:text-base">
                                 {format(booking.date, "dd 'de' MMMM", {
                                     locale: ptBR,
                                 })}
@@ -42,21 +42,21 @@ const BookingInfo = ({ booking }: BookingItemProps) => {
                         </div>
 
                         <div className="flex justify-between">
-                            <h3 className="text-gray-400 text-sm">
+                            <h3 className="text-gray-400 text-sm lg:text-base">
                                 Horario
                             </h3>
 
-                            <h4 className="text-sm">{format(booking.date, "hh:mm")}</h4>
+                            <h4 className="text-sm lg:text-base">{format(booking.date, "hh:mm")}</h4>
                         </div>
                     </>
                 )}
 
                 <div className="flex justify-between">
-                    <h3 className="text-gray-400 text-sm">
+                    <h3 className="text-gray-400 text-sm lg:text-base">
                         Barbearia
                     </h3>
 
-                    <h4 className="text-sm">{booking.barbershop.name}</h4>
+                    <h4 className="text-sm lg:text-base">{booking.barbershop.name}</h4>
                 </div>
             </CardContent>
         </Card>

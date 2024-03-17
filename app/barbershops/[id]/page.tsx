@@ -29,7 +29,6 @@ const BarbershopDetailsPage = async ({ params }: BarbershopDetailsPageProps) => 
     });
 
     if (!barbershop) {
-        // TODO redirecionar para homepage
         return null;
     }
 

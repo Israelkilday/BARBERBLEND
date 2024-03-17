@@ -28,7 +28,7 @@ const Header = () => {
                     </Link>
 
                     {data?.user ? (
-                        <div className="flex gap-2 justify-between px-5 items-center">
+                        <div className="flex gap-2 justify-between px-5 lg:px-0 items-center">
                             <div className="hidden items-center gap-3 lg:flex">
                                 <Avatar>
                                     <AvatarImage src={data.user?.image ?? ""} />

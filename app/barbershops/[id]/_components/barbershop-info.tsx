@@ -1,11 +1,7 @@
 "use client"
 
 import { useCopyToClipboard } from "@uidotdev/usehooks";
-
-import { Sheet, SheetContent, SheetTrigger } from "@/app/_components/ui/sheet";
-import SideMenu from "@/app/_components/side-menu";
-
-import { ChevronLeftIcon, Clock, Copy, MapPinIcon, MenuIcon, Phone, Smartphone, StarIcon } from "lucide-react";
+import { ChevronLeftIcon, Clock, Copy, MapPinIcon, Phone, Smartphone, StarIcon } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/app/_components/ui/button";
 import { Barbershop } from "@prisma/client";
@@ -56,7 +52,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                 </div>
             </div>
 
-            <div className="lg:flex lg:px-32 gap-5">
+            <div className="lg:flex lg:px-32 gap-5 lg:gap-12">
                 <div className="lg:min-w-[50%]">
                     <div className="px-5 mb-3 mt-3 lg:mt-3 lg:px-0">
                         <div className="flex flex-col md:flex-row gap-2 mt-2 justify-between">
@@ -85,15 +81,15 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                             style={{
                                 objectFit: "cover",
                             }}
-                            className="opacity-75 h-auto md:max-w-[95%] md:mx-5 md:rounded-3xl lg:mx-0 lg:min-w-[100%] lg:min-h-[445px]"
+                            className="opacity-75 h-auto md:max-w-[95%] md:mx-5 md:rounded-3xl lg:mx-0 lg:min-w-[100%] lg:min-h-[427px]"
                         />
                     </div>
                 </div>
 
-                <div className="px-5 lg:mt-[47px]">
+                <div className="px-5 lg:px-0 lg:mt-[47px]">
                     <Card className="">
                         <CardContent className="p-5 md:p-4 lg justify-center">
-                            <h2 className="text-sm lg:text-center md:px-5 lg-px-0 pb-3 mb-3 uppercase text-gray-400 font-bold border-b border-solid border-secondary md:text-lg lg:text-2xlcd lg:px-0">
+                            <h2 className="text-sm lg:text-center pb-3 mb-3 md:px-5 lg-px-0  uppercase text-gray-400 font-bold border-b border-solid border-secondary md:text-lg lg:text-xl lg:px-0">
                                 INFORMAÇÕES
                             </h2>
 

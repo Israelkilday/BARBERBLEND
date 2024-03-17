@@ -55,7 +55,7 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
                         {barbershop.address}
                     </p>
 
-                    <Button variant="secondary" className="w-full mt-3"
+                    <Button variant="secondary" className="w-full mt-3 lg:text-base"
                         onClick={handleBookingClick}
                     >
                         Reservar

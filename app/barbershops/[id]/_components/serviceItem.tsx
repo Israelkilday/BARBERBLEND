@@ -148,12 +148,12 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                     </div>
 
                     <div className="flex flex-col w-full">
-                        <h2 className="font-bold">{service.name}</h2>
+                        <h2 className="font-bold lg:text-base">{service.name}</h2>
 
                         <p className="text-sm text-gray-400">{service.description}</p>
 
                         <div className="flex items-center justify-between mt-3">
-                            <p className="text-primary text-sm font-bold">
+                            <p className="text-primary text-sm lg:text-base font-bold">
                                 {Intl.NumberFormat("pt-BR", {
                                     style: "currency",
                                     currency: "BRL"
@@ -176,7 +176,7 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                     </SheetHeader>
 
                                     <div className="lg:flex lg:px-0 lg:pt-5">
-                                        <div className="py-4">
+                                        <div className="py-4 lg:pb-2">
                                             <Calendar
                                                 mode="single"
                                                 selected={date}
@@ -248,7 +248,7 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                                     <SheetFooter className="px-5">
                                         <Button onClick={handleBookingSubmit}
                                             disabled={(!hour || !date) || submitIsLoading}>
-                                            {submitIsLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                                            {submitIsLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin lg:text-base flex" />}
                                             Confirmar reserva
                                         </Button>
                                     </SheetFooter>

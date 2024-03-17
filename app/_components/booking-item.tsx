@@ -64,7 +64,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
                         <div className="flex flex-col gap-2 py-5 flex-[3] pl-5">
                             <Badge
                                 variant={isBookingConfirmed ? "default" : "secondary"}
-                                className="w-fit md:text-base font-bold"
+                                className="w-fit md:text-sm font-bold"
                             >
                                 {isBookingConfirmed ? "Confirmado" : "Finalizado"}
                             </Badge>
@@ -83,32 +83,33 @@ const BookingItem = ({ booking }: BookingItemProps) => {
                         </div>
 
                         <div className="flex flex-col items-center justify-center flex-1 border-l border-solid border-secondary">
-                            <p className="text-sm capitalize">
+                            <p className="text-sm lg:text-base capitalize">
                                 {format(booking.date, "MMMM", {
                                     locale: ptBR,
                                 })}
                             </p>
                             <p className="text-2xl">{format(booking.date, "dd")}</p>
-                            <p className="text-sm">{format(booking.date, "hh:mm")}</p>
+                            <p className="text-sm lg:text-base">{format(booking.date, "hh:mm")}</p>
                         </div>
                     </CardContent>
                 </Card>
             </SheetTrigger>
 
-            <SheetContent className="px-0">
-                <SheetHeader className="px-5 text-left pb-6 border-b border-solid border-secondary">
+            <SheetContent className="px-5">
+                <SheetHeader className="text-left pb-6 border-b border-solid border-secondary">
                     <SheetTitle className="text-xl">Informaçoes de Reserva</SheetTitle>
                 </SheetHeader>
 
-                <div className="px-5">
+                <div>
                     <div className="relative h-[180px] w-full mt-6">
                         <Image
                             src="/barbershop-map.png"
                             fill
                             alt={booking.barbershop.name}
                             style={{
-                                objectFit: "contain",
+                                objectFit: "cover",
                             }}
+                            className="rounded-xl"
                         />
 
                         <div className="w-full absolute bottom-7 left-0 px-5">
