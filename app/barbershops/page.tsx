@@ -28,7 +28,7 @@ const BarbershopsPage = async ({ searchParams }: BarbershopsPageProps) => {
         <>
             <Header />
 
-            <div className="px-5 lg:px-0 py-6 flex flex-col gap-6">
+            <div className="px-5 lg:px-0 py-6 flex flex-col gap-4">
                 <div className="md:w-1/2 lg:w-1/2 lg:px-32 lg:pt-5 ">
                     <Search
                         defaultValues={{
@@ -37,7 +37,7 @@ const BarbershopsPage = async ({ searchParams }: BarbershopsPageProps) => {
                     />
                 </div>
 
-                <h1 className="text-gray-400 font-bold text-xs lg:text-xl uppercase lg:px-32 lg:pt-5   ">
+                <h1 className="text-gray-400 font-bold text-xs md:text-lg lg:text-xl uppercase lg:px-32 lg:pt-5">
                     Resultados para &quot;{searchParams.search}&quot;
                 </h1>
 

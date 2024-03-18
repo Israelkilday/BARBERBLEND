@@ -118,7 +118,7 @@ export default async function Home() {
           className="-z-30 opacity-40 grayscale hidden lg:flex max-h-[570px]"
         />
       </div >
-
+      
       <div className="mt-6 lg:pt-6 lg:px-32">
         <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
           Conheça nossos destaques
@@ -133,7 +133,7 @@ export default async function Home() {
         </h2>
 
         <Carousel
-          className=" overflow-x-auto pl-5 pr-0 lg:pl-0 md:max-w-3xl lg:max-w-6xl lg:overflow-hidden"
+          className="overflow-x-auto pl-5 pr-0 lg:pl-0 md:max-w-3xl lg:max-w-6xl lg:overflow-hidden"
         >
           <CarouselContent>
             {recomendedBarbershops.map((barbershop) => (

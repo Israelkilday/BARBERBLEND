@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/app/_components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/app/_components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/app/_components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay"
 import { Award, NotebookPen, Sparkles, UserRoundCheck } from "lucide-react";
 
@@ -64,11 +64,6 @@ const ServicesSection = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-
-      <CarouselPrevious className="hidden" />
-
-      <CarouselNext className="hidden" />
-
     </Carousel>
   )
 }
