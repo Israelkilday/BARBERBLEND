@@ -46,11 +46,11 @@ const ServicesSection = () => {
       <CarouselContent className="w-11/12 lg:w-1/2">
         {services.map(card => (
           <CarouselItem key={card.id}>
-            <Card className="min-w-full max-w-full rounded-2xl h-[250px] md:h-40 lg:h-[214px]">
-              <CardContent className="px-1 py-0 pt-1">
+            <Card className="min-w-full max-w-full rounded-2xl h-[248px] md:h-44 lg:h-[230px] ">
+              <CardContent className="px-2 py-0 pt-2">
                 <div className="flex gap-1 flex-col items-start px-2 pb-3 ">
 
-                  <h2 className="flex gap-2 items-center font-bold mt-2 mb-2 overflow-hidden text-ellipsis text-nowrap lg:text-lg">
+                  <h2 className="flex w-full gap-2 items-center font-bold mt-2 mb-2 overflow-hidden text-ellipsis text-nowrap lg:text-lg pb-2 border-b border-solid border-secondary">
                     {card.icon}
                     {card.title}
                   </h2>

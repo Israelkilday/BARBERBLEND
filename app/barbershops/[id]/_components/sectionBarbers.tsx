@@ -61,7 +61,7 @@ const SectionBarbers = () => {
                     {barbers.map(card => (
                         <CarouselItem key={card.id}>
                             <Card className="min-w-full max-w-full h-72 md:h-[340px] lg:h-[410px] rounded-2xl">
-                                <CardContent className="px-1 pt-1">
+                                <CardContent className="p-0 px-1 pt-1">
                                     <div className="w-full h-52 md:h-64 lg:h-80 rounded-2xl relative overflow-hidden">
                                         <Image
                                             fill
