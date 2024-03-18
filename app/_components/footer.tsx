@@ -1,8 +1,7 @@
 "use client"
 
-import { ArrowUp, Headset, Phone, Scissors } from "lucide-react";
 import Link from "next/link";
-// REACT ICONS
+import { ArrowUp, Headset, Phone, Scissors } from "lucide-react";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 

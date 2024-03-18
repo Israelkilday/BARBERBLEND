@@ -1,18 +1,20 @@
 "use client"
 
+
 import { Prisma } from "@prisma/client";
+import { format, isFuture } from "date-fns";
+import { ptBR } from "date-fns/locale";
+import Image from "next/image";
+import { cancelBooking } from "../_actions/cancel-booking";
+import BookingInfo from "./booking-info";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
+import { toast } from "sonner";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Badge } from "./ui/badge";
 import { Card, CardContent } from "./ui/card";
-import { format, isFuture } from "date-fns";
-import { ptBR } from "date-fns/locale";
-import { Sheet, SheetClose, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
-import Image from "next/image";
 import { Button } from "./ui/button";
-import { cancelBooking } from "../_actions/cancel-booking";
-import { toast } from "sonner";
-import { useState } from "react";
-import { Loader2 } from "lucide-react";
+import { Sheet, SheetClose, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet";
 import {
     AlertDialog,
     AlertDialogAction,
@@ -24,7 +26,7 @@ import {
     AlertDialogTitle,
     AlertDialogTrigger
 } from "./ui/alert-dialog";
-import BookingInfo from "./booking-info";
+
 
 interface BookingItemProps {
     booking: Prisma.BookingGetPayload<{

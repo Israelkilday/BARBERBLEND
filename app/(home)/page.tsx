@@ -1,16 +1,21 @@
 import { format } from "date-fns";
-import Header from "../_components/header";
 import { ptBR } from "date-fns/locale";
+import Header from "../_components/header";
 import Search from "./_components/search";
 import BookingItem from "../_components/booking-item";
-import { db } from "../_lib/prisma";
 import BarbershopItem from "./_components/barbershop-item";
+import { db } from "../_lib/prisma";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../_lib/auth";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../_components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image";
+import { authOptions } from "../_lib/auth";
 import ServicesSection from "./_components/servicesSection";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "../_components/ui/carousel";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -118,7 +123,7 @@ export default async function Home() {
           className="-z-30 opacity-40 grayscale hidden lg:flex max-h-[570px]"
         />
       </div >
-      
+
       <div className="mt-6 lg:pt-6 lg:px-32">
         <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
           Conheça nossos destaques

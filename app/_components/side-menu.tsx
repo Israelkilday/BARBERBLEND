@@ -1,10 +1,10 @@
 "use client"
 
-import { Avatar, AvatarImage } from "./ui/avatar";
 import Link from "next/link";
-import { CalendarIcon, HomeIcon, LogInIcon, LogOutIcon, UserIcon } from "lucide-react";
-import { SheetHeader, SheetTitle } from "./ui/sheet";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { CalendarIcon, HomeIcon, LogInIcon, LogOutIcon, UserIcon } from "lucide-react";
+import { Avatar, AvatarImage } from "./ui/avatar";
+import { SheetHeader, SheetTitle } from "./ui/sheet";
 import { Button } from "./ui/button";
 
 const SideMenu = () => {

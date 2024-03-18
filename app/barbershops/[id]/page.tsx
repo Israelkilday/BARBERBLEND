@@ -1,9 +1,9 @@
 import { db } from "@/app/_lib/prisma"
 import BarbershopInfo from "./_components/barbershop-info";
+import SectionBarbers from "./_components/sectionBarbers";
 import ServiceItem from "./_components/serviceItem";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/_lib/auth";
-import SectionBarbers from "./_components/sectionBarbers";
 
 interface BarbershopDetailsPageProps {
     params: {

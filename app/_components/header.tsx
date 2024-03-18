@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-import { CalendarIcon, CircleUserRound, LogInIcon, LogOutIcon, MenuIcon, Scissors, UserIcon } from "lucide-react";
+import { CalendarIcon, CircleUserRound, LogOutIcon, MenuIcon, Scissors, UserIcon } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import SideMenu from "./side-menu";
 import Link from "next/link";

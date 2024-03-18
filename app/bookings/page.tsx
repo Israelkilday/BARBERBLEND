@@ -1,9 +1,9 @@
-import { getServerSession } from "next-auth";
-import Header from "../_components/header";
-import { redirect } from "next/navigation";
 import { db } from "../_lib/prisma";
-import BookingItem from "../_components/booking-item";
 import { authOptions } from "../_lib/auth";
+import { getServerSession } from "next-auth";
+import { redirect } from "next/navigation";
+import Header from "../_components/header";
+import BookingItem from "../_components/booking-item";
 import { Annoyed } from "lucide-react";
 
 const BookingsPage = async () => {

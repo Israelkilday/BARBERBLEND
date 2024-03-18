@@ -21,11 +21,6 @@ model User {
   bookings      Booking[]
 }
 
-// model User {
-//   id       String    @id @default(uuid())
-//   name     String
-// }
-
 model Barbershop {
   id          String    @id @default(uuid())
   name        String

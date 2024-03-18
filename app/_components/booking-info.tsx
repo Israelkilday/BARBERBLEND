@@ -1,4 +1,4 @@
-import { Barbershop, Booking, Prisma, Service } from "@prisma/client";
+import { Barbershop, Booking, Service } from "@prisma/client";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { Card, CardContent } from "./ui/card";

@@ -1,14 +1,22 @@
 "use client"
 
-import { useCopyToClipboard } from "@uidotdev/usehooks";
-import { ChevronLeftIcon, Clock, Copy, MapPinIcon, Phone, Smartphone, StarIcon } from "lucide-react";
-import Image from "next/image";
-import { Button } from "@/app/_components/ui/button";
 import { Barbershop } from "@prisma/client";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Header from "@/app/_components/header";
+import { useCopyToClipboard } from "@uidotdev/usehooks";
+import { Button } from "@/app/_components/ui/button";
 import { Card, CardContent } from "@/app/_components/ui/card";
 import { toast } from "sonner";
+import {
+    ChevronLeftIcon,
+    Clock,
+    Copy,
+    MapPinIcon,
+    Phone,
+    Smartphone,
+    StarIcon
+} from "lucide-react";
 
 interface BarbershopInfoProps {
     barbershop: Barbershop

@@ -1,10 +1,9 @@
 "use client"
 
-import { Card, CardContent } from '@/app/_components/ui/card'
 import Image from 'next/image'
-import React from 'react'
-import { Carousel, CarouselContent, CarouselItem } from "@/app/_components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay"
+import { Carousel, CarouselContent, CarouselItem } from "@/app/_components/ui/carousel";
+import { Card, CardContent } from '@/app/_components/ui/card'
 import { Scissors } from 'lucide-react';
 
 const barbers = [
