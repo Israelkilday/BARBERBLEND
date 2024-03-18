@@ -17,15 +17,15 @@
 ## 🚀 Funcionalidades:
 
 - [x] ***Interface de usuário, navegação e design***
-	- Através da combinação de ***Next.js + Tailwind + ShadCN/UI*** foi criado uma interface moderna, atraente, intuitiva e totalmente responsiva.
+- Através da combinação de ***Next.js + Tailwind + ShadCN/UI*** foi criado uma interface moderna, atraente, intuitiva e totalmente responsiva.
 - [x] ***Barra de pesquisam, Barbearias recomendados e galeria de fotos***
-	- Possui sistema de pesquisa na qual exibe todas as barbearias que contenham o termo que foi pesquisado, além de também possuir carroseis que exibem as barbearias, agendamentos e seções de destaques.
+- Possui sistema de pesquisa na qual exibe todas as barbearias que contenham o termo que foi pesquisado, além de também possuir carroseis que exibem as barbearias, agendamentos e seções de destaques.
 - [x] ***Agendamento e cancelamento com sincronização de horário, data e localização***
-	- Possui Sistema de agendamento completo, rápido e intuitivo com controle do dia, mês e horário.
+- Possui Sistema de agendamento completo, rápido e intuitivo com controle do dia, mês e horário.
 - [x] ***Sistema de autenticação com o Google***
-	- Integração simplificada de login utilizando provedor OAuth do Google fornecido pelo Next Auth.
+- Integração simplificada de login utilizando provedor OAuth do Google fornecido pelo Next Auth.
 - [x] ***Armazenamento de dados***
-	- Integração simplificada com o PostgreSQL atravéz do Prisma ORM.
+- Integração simplificada com o PostgreSQL atravéz do Prisma ORM.
 
   ## 🛠️ Tecnologias Utilizadas
 
