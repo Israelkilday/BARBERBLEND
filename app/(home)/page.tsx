@@ -147,7 +147,9 @@ export default async function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
+          
           <CarouselPrevious className="hidden left-1 lg:flex" />
+          
           <CarouselNext className="hidden right-1 lg:flex" />
         </Carousel >
       </div>
