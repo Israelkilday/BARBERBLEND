@@ -51,7 +51,7 @@ const SectionBarbers = () => {
             <Carousel
                 plugins={[
                     Autoplay({
-                        delay: 3000,
+                        delay: 2000,
                     }),
                 ]}
                 className=" flex pl-5 gap-3"
