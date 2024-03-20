@@ -61,7 +61,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
             </div>
 
             <div className="lg:flex lg:px-32 gap-5 lg:gap-12">
-                <div className="lg:min-w-[50%]">
+                <div className="lg:min-w-[50%] lg:min-h-full">
                     <div className="px-5 mb-3 mt-3 lg:mt-3 lg:px-0">
                         <div className="flex flex-col md:flex-row gap-2 mt-2 justify-between">
                             <div className="flex items-center gap-1 ">
@@ -72,7 +72,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                         </div>
                     </div>
 
-                    <div className="h-[250px] lg:h-96 w-full relative mb-6">
+                    <div className="h-[250px] lg:min-h-full w-full relative mb-6">
                         <Button
                             size="icon"
                             variant="outline"
@@ -89,7 +89,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
                             style={{
                                 objectFit: "cover",
                             }}
-                            className="opacity-75 h-auto md:max-w-[95%] md:mx-5 md:rounded-3xl lg:mx-0 lg:min-w-[100%] lg:min-h-[427px]"
+                            className="opacity-75 h-auto md:max-w-[95%] md:mx-5 md:rounded-3xl lg:mx-0 lg:min-w-[100%] lg:max-h-[90%]"
                         />
                     </div>
                 </div>
