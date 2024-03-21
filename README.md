@@ -68,7 +68,17 @@
  - ***Vscode:*** <br>
    Editor de código fonte utilizado para desenvolvimento do projeto.
  - ***Git:*** <br>
-   Sistema de controle de versão utilizado para gerenciar o código fonte do projeto. 
+   Sistema de controle de versão utilizado para gerenciar o código fonte do projeto.
+
+   
+ ## 💻 Como Rodar o Projeto
+
+ 1. Clone o repositório: `git clone https://github.com/Israelkilday/barbershop`
+ 2. Instale as dependências: `npm install`
+ 3. Configure o ***Supabase***: Adicione suas credenciais.
+ 4. Inicie o servidor de desenvolvimento: `npm run dev`
+ 5. Abra o navegador e acesse `http://localhost:3000`
+    
  
 ## 📁 Estrutura de Diretórios
 
@@ -100,7 +110,7 @@ Se você deseja contribuir com este projeto, siga estas etapas:
 
 ## 🔗 Link do Projeto
 
-https://barbershop-olive.vercel.app/
+https://fullstack-barbershop.vercel.app/
 
 ## 🧠 Autor
 
