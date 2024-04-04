@@ -25,7 +25,8 @@ export default async function Home() {
       db.barbershop.findMany({}),
       db.barbershop.findMany({
         orderBy: {
-          id: "asc",
+          // id: "asc",
+          id: "desc",
         },
       }),
       session?.user
@@ -105,7 +106,7 @@ export default async function Home() {
 
           <Carousel className=" overflow-x-auto pl-5 pr-0 lg:pl-0 md:max-w-3xl lg:max-w-6xl lg:overflow-hidden">
             <CarouselContent>
-              {barbershops.map((barbershop) => (
+              {barbershops.slice(0, 10).map((barbershop) => (
                 <CarouselItem
                   key={barbershop.id}
                   className="min-w-[183px] max-w-[183px] md:min-w-[243px] md:max-w-[243px] "
@@ -145,7 +146,7 @@ export default async function Home() {
 
         <Carousel className="overflow-x-auto pl-5 pr-0 lg:pl-0 md:max-w-3xl lg:max-w-6xl lg:overflow-hidden">
           <CarouselContent>
-            {recomendedBarbershops.map((barbershop) => (
+            {recomendedBarbershops.slice(0, 10).map((barbershop) => (
               <CarouselItem
                 key={barbershop.id}
                 className="min-w-[183px] max-w-[183px] md:min-w-[243px] md:max-w-[243px] lg:max-w-[275px] lg:min-w-[275px]"

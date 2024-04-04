@@ -61,7 +61,6 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
                         Reservar
                     </Button>
                 </div>
-
             </CardContent>
         </Card>
     );

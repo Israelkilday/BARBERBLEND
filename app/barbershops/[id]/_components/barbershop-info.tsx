@@ -170,5 +170,3 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
 
 export default BarbershopInfo;
 
-// npm i --save-dev prisma@latest                       │
-// npm i @prisma/client@latest
