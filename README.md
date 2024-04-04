@@ -7,6 +7,37 @@
  Neste projeto, implementei uma funcionalidade de agendamento e cancelamento intuitiva e sincronizada, permitindo aos usuários marcar e desmarcar serviços de forma fácil e eficiente.
 </div>
 
+<details>
+  <summary>Índice</summary>
+  <ol>
+    <li>
+      <a href="#✂-BARBERBLEND">Sobre</a>
+    </li>
+    <li>
+      <a href="##🎨-Layout-💻-&&-📱-Mobile">Layout</a>
+    </li>
+    <li>
+      <a href="##⚙️-Pré-requisitos">Pré-requisitos</a>
+    </li>
+  </ol>
+</details>
+
+<details>
+  <summary>Índice</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
+      <ul>
+        <li><a href="#feito-com">Feito com</a></li>
+        <li><a href="#notas-de-destaque">Notas de destaque</a></li>
+        <li><a href="#desafios-e-aprendizados">Desafios e aprendizados</a></li>
+        </ul>
+    </li>
+    <li><a href="#utilização">Utilização</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ol>
+</details>
+
 ## 🎨 Layout 💻 && 📱 Mobile  
 
 ## ⚙️ Pré-requisitos
