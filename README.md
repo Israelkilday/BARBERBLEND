@@ -1,4 +1,4 @@
-# ✂ BARBERBLEND
+# BARBERBLEND
 
 <div align="center"><br>
   
@@ -11,7 +11,7 @@
   <summary>Índice</summary>
   <ol>
     <li>
-      <a href="#✂-BARBERBLEND">Sobre</a>
+      <a href="#BARBERBLEND">Sobre</a>
     </li>
     <li>
       <a href="#🎨-Layout-💻-&&-📱-Mobile">Layout</a>
