@@ -9,7 +9,9 @@
  Neste projeto, implementei uma funcionalidade de agendamento e cancelamento intuitiva e sincronizada, permitindo aos usuários marcar e desmarcar serviços de forma fácil e eficiente.
 </div>
 
-## 🎨 Layout 💻 && 📱 Mobile  
+## 🎨 Layout 💻 Desktop & 📱 Mobile  
+
+https://github.com/Israelkilday/barbershop/assets/101229204/6e473802-9031-43e1-b867-68eb06ee5dde
 
 ## ⚙️ Pré-requisitos
 
