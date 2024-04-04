@@ -3,7 +3,8 @@
 <div align="center"><br>
   
  ***[BARBERBLEND](https://barbershop-olive.vercel.app/)*** é uma plataforma de agendamento online que simplifica o processo de reserva de 
- horários em diversas barbearias. Com BarberBlend, você pode agendar serviços especializados com praticidade e rapidez, tudo no conforto da sua casa.
+ horários em diversas barbearias. Com BarberBlend, você pode agendar serviços especializados com praticidade e rapidez, tudo no conforto da sua casa.  
+ Neste projeto, implementei uma funcionalidade de agendamento e cancelamento intuitiva e sincronizada, permitindo aos usuários marcar e desmarcar serviços de forma fácil e eficiente.
 </div>
 
 ## 🎨 Layout 💻 && 📱 Mobile  
@@ -17,15 +18,23 @@
 ## 🚀 Funcionalidades:
 
 - [x] ***Interface de usuário, navegação e design***
-- Através da combinação de ***Next.js + Tailwind + ShadCN/UI*** foi criado uma interface moderna, atraente, intuitiva e totalmente responsiva.
-- [x] ***Barra de pesquisam, Barbearias recomendados e galeria de fotos***
-- Possui sistema de pesquisa na qual exibe todas as barbearias que contenham o termo que foi pesquisado, além de também possuir carroseis que exibem as barbearias, agendamentos e seções de destaques.
-- [x] ***Agendamento e cancelamento com sincronização de horário, data e localização***
-- Possui Sistema de agendamento completo, rápido e intuitivo com controle do dia, mês e horário.
-- [x] ***Sistema de autenticação com o Google***
-- Integração simplificada de login utilizando provedor OAuth do Google fornecido pelo Next Auth.
+- Através da combinação de `Next.js` + `Tailwind` + `ShadCN/UI` foi criado uma interface moderna, atraente, intuitiva e totalmente responsiva.
+- [x] ***Barra de pesquisa***
+-  Implementei uma funcionalidade de busca utilizando o `react-hook-form` para gerenciar o formulário e o `zod` para validação dos dados inseridos.
+- [x] ***Carrosséis Interativos***
+- Possui carrosséis que exibem as barbearias, agendamentos, seções de destaques e de barbeiros.
+- [x] ***Seleção de Data e Hora com sincronização de horário e localização***
+- Os usuários podem escolher a data e o horário desejados para agendar um serviço, com opções dinâmicas e atualizadas em tempo real.
+- [x] ***Visualização de Disponibilidade***
+- Exibi a disponibilidade de horários de forma clara e organizada, ajudando os usuários a encontrar o melhor momento para o agendamento.
+- [x] ***Confirmação Instantânea***
+- Após a confirmação do agendamento, os usuários recebem uma confirmação imediata e podem visualizar os detalhes do serviço agendado.
+- [x] ***Cancelamento Simples***
+- Caso seja necessário, os usuários podem cancelar o agendamento de forma simples e rápida, mantendo a sincronização de horários atualizada.
+- [x] ***Sistema de autenticação com o `NextAuth` integrado ao `Google`***
+- Integração simplificada de login utilizando serviço de autenticação `OAuth` do Google.
 - [x] ***Armazenamento de dados***
-- Integração simplificada com o PostgreSQL atravéz do Prisma ORM.
+- Integração simplificada com o Banco de Dados `PostgreSQL` atravéz do `Prisma ORM` e `Supabase`.
 
   ## 🛠️ Tecnologias Utilizadas
 
