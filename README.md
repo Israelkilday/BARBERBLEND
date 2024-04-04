@@ -1,42 +1,13 @@
 # ✂ BARBERBLEND
 
+<a name="readme-top"></a>
+
 <div align="center"><br>
   
  ***[BARBERBLEND](https://barbershop-olive.vercel.app/)*** é uma plataforma de agendamento online que simplifica o processo de reserva de 
  horários em diversas barbearias. Com BarberBlend, você pode agendar serviços especializados com praticidade e rapidez, tudo no conforto da sua casa.  
  Neste projeto, implementei uma funcionalidade de agendamento e cancelamento intuitiva e sincronizada, permitindo aos usuários marcar e desmarcar serviços de forma fácil e eficiente.
 </div>
-
-<details>
-  <summary>Índice</summary>
-  <ol>
-    <li>
-      <a href="#BARBERBLEND">Sobre</a>
-    </li>
-    <li>
-      <a href="#🎨-Layout-💻-&&-📱-Mobile">Layout</a>
-    </li>
-    <li>
-      <a href="#⚙️-Pré-requisitos">Pré-requisitos</a>
-    </li>
-  </ol>
-</details>
-
-<details>
-  <summary>Índice</summary>
-  <ol>
-    <li>
-      <a href="#sobre-o-projeto">Sobre o projeto</a>
-      <ul>
-        <li><a href="#feito-com">Feito com</a></li>
-        <li><a href="#notas-de-destaque">Notas de destaque</a></li>
-        <li><a href="#desafios-e-aprendizados">Desafios e aprendizados</a></li>
-        </ul>
-    </li>
-    <li><a href="#utilização">Utilização</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ol>
-</details>
 
 ## 🎨 Layout 💻 && 📱 Mobile  
 
@@ -161,5 +132,5 @@ israel.kilday@yahoo.com.br
 </a>
 
  ### Obrigado por visitar meu projeto! 👋 
-
- <p align="right">(<a href="#readme-top">VOLTAR AO TOPO</a>)</p>  
+  
+ <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
