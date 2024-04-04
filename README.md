@@ -14,10 +14,10 @@
       <a href="#✂-BARBERBLEND">Sobre</a>
     </li>
     <li>
-      <a href="##🎨-Layout-💻-&&-📱-Mobile">Layout</a>
+      <a href="#🎨-Layout-💻-&&-📱-Mobile">Layout</a>
     </li>
     <li>
-      <a href="##⚙️-Pré-requisitos">Pré-requisitos</a>
+      <a href="#⚙️-Pré-requisitos">Pré-requisitos</a>
     </li>
   </ol>
 </details>
