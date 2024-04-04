@@ -1,4 +1,4 @@
-# BARBERBLEND
+# ✂ BARBERBLEND
 
 <div align="center"><br>
   
@@ -161,4 +161,5 @@ israel.kilday@yahoo.com.br
 </a>
 
  ### Obrigado por visitar meu projeto! 👋 
-   
+
+ <p align="right">(<a href="#readme-top">VOLTAR AO TOPO</a>)</p>  
