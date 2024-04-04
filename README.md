@@ -22,7 +22,7 @@
 - [x] ***Interface de usuário, navegação e design***
 - Através da combinação de `Next.js` + `Tailwind` + `ShadCN/UI` foi criado uma interface moderna, atraente, intuitiva e totalmente responsiva.
 - [x] ***Barra de pesquisa***
--  Implementei uma funcionalidade de busca utilizando o `react-hook-form` para gerenciar o formulário e o `zod` para validação dos dados inseridos.
+- Foi implementado uma funcionalidade de busca utilizando o `react-hook-form` para gerenciar o formulário e o `zod` para validação dos dados inseridos.
 - [x] ***Carrosséis Interativos***
 - Possui carrosséis que exibem as barbearias, agendamentos, seções de destaques e de barbeiros.
 - [x] ***Seleção de Data e Hora com sincronização de horário e localização***
