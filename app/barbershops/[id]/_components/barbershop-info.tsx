@@ -39,44 +39,34 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
 
   return (
     <div>
-      <div className="mb-6">
+      <div className="mb-20 hidden lg:block">
         <Header />
-      </div>
-
-      <div className="px-5 lg:px-32 lg:mb-5">
-        <div className="md:flex justify-between border-b border-solid border-secondary pb-3 lg:mt-16">
-          <h1 className="text-xl pb-2 lg:text-3xl font-bold ">
-            {barbershop.name}
-          </h1>
-
-          <div className="flex gap-1 items-center w-fit p-3 border border-solid border-secondary rounded-lg">
-            <StarIcon className="text-primary" size={20} />
-
-            <p className="text-sm lg:text-base">
-              {barbershop.ratings} ({barbershop.stars} avaliações)
-            </p>
-          </div>
-        </div>
       </div>
 
       <div className="lg:flex lg:px-32 gap-5 lg:gap-12">
         <div className="lg:min-w-[50%] lg:min-h-full">
-          <div className="px-5 mb-3 mt-3 lg:mt-3 lg:px-0">
-            <div className="flex flex-col md:flex-row gap-2 mt-2 justify-between">
-              <div className="flex items-center gap-1 ">
-                <MapPinIcon className="text-primary font-bold" size={20} />
+          <div className="lg:mb-2 hidden lg:block">
+            <div className="flex justify-between">
+              <h1 className="text-base items-end lg:text-2xl font-bold ">
+                {barbershop.name}
+              </h1>
 
-                <p className="text-sm lg:text-base">{barbershop.address}</p>
+              <div className="flex gap-1 items-center">
+                <StarIcon className="text-primary" size={20} />
+
+                <p className="text-sm lg:text-base">
+                  {barbershop.ratings} ({barbershop.stars} avaliações)
+                </p>
               </div>
             </div>
           </div>
 
-          <div className="h-[250px] lg:min-h-full w-full relative mb-6">
+          <div className="h-[280px] lg:min-h-full w-full relative mb-6">
             <Button
               size="icon"
               variant="outline"
               onClick={handleBackClick}
-              className="z-50 absolute top-4 left-4 md:left-9"
+              className="z-50 rounded-full absolute top-4 left-4 md:left-9"
             >
               <ChevronLeftIcon />
             </Button>
@@ -88,19 +78,41 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
               style={{
                 objectFit: "cover",
               }}
-              className="opacity-75 h-auto md:max-w-[95%] md:mx-5 md:rounded-3xl lg:mx-0 lg:min-w-[100%] lg:max-h-[90%]"
+              className=" h-auto w-full lg:rounded-3xl lg:min-w-[100%] lg:max-h-[89%]"
             />
           </div>
         </div>
 
-        <div className="px-5 lg:px-0 lg:mt-[47px]">
-          <Card className="">
+        <div className="md:px-32 relative bottom-4 z-50 mt-[-1.5rem] rounded-tl-3xl rounded-tr-3xl bg-background pt-7 lg:pt-0 px-5 lg:px-0 lg:mt-[22px]">
+          <div className="lg:mb-5 lg:hidden">
+            <div className="flex justify-between border-b border-solid border-secondary pb-3 mb-7">
+              <h1 className="text-base items-end font-bold ">
+                {barbershop.name}
+              </h1>
+
+              <div className="flex gap-1 items-end      ">
+                <StarIcon className="text-primary" size={20} />
+
+                <p className="text-sm">
+                  {barbershop.ratings} ({barbershop.stars} avaliações)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-end gap-1 pb-3">
+            <MapPinIcon className="text-primary font-bold" size={20} />
+
+            <p className="text-sm lg:text-base">{barbershop.address}</p>
+          </div>
+
+          <Card>
             <CardContent className="p-5 md:p-4 lg justify-center">
               <h2 className="text-sm lg:text-center pb-3 mb-3 md:px-5 lg-px-0  uppercase text-gray-400 font-bold border-b border-solid border-secondary md:text-lg lg:text-xl lg:px-0">
                 INFORMAÇÕES
               </h2>
 
-              <p className="pb-3 text-sm text-gray-400 border-b border-solid border-secondary mb-3 md:px-5 lg:px-0">
+              <p className="pb-3 text-sm text-gray-400 border-b border-solid border-secondary mb-3 md:px-5">
                 {barbershop.description}
               </p>
 
@@ -169,4 +181,3 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
 };
 
 export default BarbershopInfo;
-
