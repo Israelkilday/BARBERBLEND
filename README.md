@@ -15,7 +15,8 @@ https://github.com/Israelkilday/barbershop/assets/101229204/6e473802-9031-43e1-b
 
 ## Fluxograma da aplicação
 
-![Untitled diagram-2024-06-19-215603](https://github.com/Israelkilday/BARBERBLEND/assets/101229204/4a2e2afb-d97d-4bd0-a1c3-ac90ed396325)
+![Untitled diagram-2024-06-19-232413](https://github.com/Israelkilday/BARBERBLEND/assets/101229204/4fee8a4f-0d72-4f2e-91d2-5f65333a1a22)
+
 
 ## Diagrama Entidade-Relacionamento do Esquema Prisma:
 
