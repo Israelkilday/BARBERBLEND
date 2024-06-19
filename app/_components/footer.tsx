@@ -15,7 +15,7 @@ const scrollToTop = () => {
 const Footer = () => {
   return (
     <footer className="flex flex-col">
-      <div className="w-full flex flex-col justify-between lg:flex-row bg-secondary px-5 pt-6 pb-5 lg:pb-9 lg:pt-5 md:px-32">
+      <div className="w-full flex flex-col justify-between lg:flex-row bg-secondary px-5 pt-6 pb-5 lg:pb-9 lg:pt-5 lg:px-32">
         <div className="flex flex-col gap-5 items-start justify-center md:justify-start pb-1 lg:pt-5">
           <Link
             href="/"
@@ -101,7 +101,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between px-5 md:px-32 py-5 border-t border-gray-700 bg-secondary">
+      <div className="flex items-center justify-between px-5 lg:px-32 py-5 border-t border-gray-700 bg-secondary">
         <p className="text-gray-400 text-sm font-bold opacity-75 md:text-base">
           © 2024 ISRAEL KILDAY
           <br className="md:hidden" /> - Todos os direitos reservados

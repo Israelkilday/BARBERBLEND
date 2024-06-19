@@ -46,7 +46,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
       <div className="lg:flex lg:px-32 gap-5 lg:gap-12">
         <div className="lg:min-w-[50%] lg:min-h-full">
           <div className="lg:mb-2 hidden lg:block">
-            <div className="flex justify-between">
+            <div className="flex justify-between pb-1">
               <h1 className="text-base items-end lg:text-2xl font-bold ">
                 {barbershop.name}
               </h1>
@@ -78,7 +78,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
               style={{
                 objectFit: "cover",
               }}
-              className=" h-auto w-full lg:rounded-3xl lg:min-w-[100%] lg:max-h-[89%]"
+              className=" h-auto w-full lg:rounded-3xl lg:min-w-[100%] lg:max-h-[88%]"
             />
           </div>
         </div>
@@ -100,7 +100,7 @@ const BarbershopInfo = ({ barbershop }: BarbershopInfoProps) => {
             </div>
           </div>
 
-          <div className="flex items-end gap-1 pb-3">
+          <div className="flex items-end gap-1 pb-4">
             <MapPinIcon className="text-primary font-bold" size={20} />
 
             <p className="text-sm lg:text-base">{barbershop.address}</p>
