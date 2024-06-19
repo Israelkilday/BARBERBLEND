@@ -4,14 +4,24 @@
 
 <div align="center"><br>
   
- ***[BARBERBLEND](https://barbershop-olive.vercel.app/)*** é uma plataforma de agendamento online que simplifica o processo de reserva de 
+ ***[BARBERBLEND](https://barberblend.vercel.app/)*** é uma plataforma de agendamento online que simplifica o processo de reserva de 
  horários em diversas barbearias. Com BarberBlend, você pode agendar serviços especializados com praticidade e rapidez, tudo no conforto da sua casa.  
  Neste projeto, implementei uma funcionalidade de agendamento e cancelamento intuitiva e sincronizada, permitindo aos usuários marcar e desmarcar serviços de forma fácil e eficiente.
 </div>
 
-## 🎨 Layout 💻 Desktop & 📱 Mobile  
+## 🎬 Vídeo do Projeto  
 
 https://github.com/Israelkilday/barbershop/assets/101229204/6e473802-9031-43e1-b867-68eb06ee5dde
+
+## Fluxograma da aplicação
+
+![Untitled diagram-2024-06-19-215603](https://github.com/Israelkilday/BARBERBLEND/assets/101229204/4a2e2afb-d97d-4bd0-a1c3-ac90ed396325)
+
+## Diagrama Entidade-Relacionamento do Esquema Prisma:
+
+![Untitled diagram-2024-06-19-220414](https://github.com/Israelkilday/BARBERBLEND/assets/101229204/a712c2e5-0d8c-4ede-95e9-03a2edc28131)
+
+
 
 ## ⚙️ Pré-requisitos
 
@@ -123,7 +133,7 @@ Se você deseja contribuir com este projeto, siga estas etapas:
 
 ## 🔗 Link do Projeto
 
-https://fullstack-barbershop.vercel.app/
+https://barberblend.vercel.app/
 
 ## 🧠 Autor
 
