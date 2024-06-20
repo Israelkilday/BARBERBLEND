@@ -52,7 +52,7 @@ const BarbershopDetailsPage = async ({
         ))}
       </div>
 
-      <div className="mb-6 lg:px-32 md:mb-16">
+      <div className="mb-12 lg:px-32 md:mb-16">
         <h2 className="px-5 md:px-32 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
           Conheça nossa equipe
         </h2>
