@@ -8,7 +8,6 @@ import {
   LogOutIcon,
   MenuIcon,
   Scissors,
-  UserIcon,
 } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import SideMenu from "./side-menu";

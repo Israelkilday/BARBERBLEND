@@ -68,6 +68,8 @@ export default async function Home() {
             <Search />
           </div>
 
+          <div></div>
+
           <div className="mt-6 pl-5 pr-0  lg:px-0">
             {confirmedBookings.length > 0 && (
               <>
