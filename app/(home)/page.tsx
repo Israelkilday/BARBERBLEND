@@ -16,6 +16,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../_components/ui/carousel";
+import { Button } from "../_components/ui/button";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -48,7 +49,7 @@ export default async function Home() {
     <div>
       <Header />
 
-      <div className="lg:flex justify-between lg:px-32 lg:py-16 lg:mb-16">
+      <div className="justify-between lg:mb-16 lg:flex lg:px-32 lg:py-16">
         <div>
           <div className="px-5 pt-5 lg:px-0 lg:py-0">
             <h2 className="text-xl font-bold md:text-2xl">
@@ -57,23 +58,27 @@ export default async function Home() {
                 : "Olá! Vamos agendar um corte hoje?"}
             </h2>
 
-            <p className="capitalize text-sm md:text-xl">
+            <p className="text-sm capitalize md:text-xl">
               {format(new Date(), "EEEE ',' dd 'de' MMMM", {
                 locale: ptBR,
               })}
             </p>
           </div>
 
-          <div className="mt-6 px-5 md:w-3/5 lg:px-0 lg:w-full">
+          <div className="mt-6 px-5 md:w-3/5 lg:w-full lg:px-0">
             <Search />
           </div>
 
-          <div></div>
+          <div className="flex gap-3">
+            <Button>
+              <Image />
+            </Button>
+          </div>
 
-          <div className="mt-6 pl-5 pr-0  lg:px-0">
+          <div className="mt-6 pl-5 pr-0 lg:px-0">
             {confirmedBookings.length > 0 && (
               <>
-                <h2 className="text-sm mb-3 uppercase text-gray-400 font-bold lg:pl-0 md:text-lg">
+                <h2 className="mb-3 text-sm font-bold uppercase text-gray-400 md:text-lg lg:pl-0">
                   Agendamentos
                 </h2>
 
@@ -83,7 +88,7 @@ export default async function Home() {
                   }}
                   className="flex gap-3 md:w-3/5 lg:w-96 lg:px-0"
                 >
-                  <CarouselContent className="w-11/12 md:w-full cursor-pointer">
+                  <CarouselContent className="w-11/12 cursor-pointer md:w-full">
                     {confirmedBookings.map((booking) => (
                       <CarouselItem key={booking.id}>
                         <BookingItem booking={booking} />
@@ -100,24 +105,24 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="mt-6 lg:w-[55%] lg:mt-0">
-          <h2 className="px-5 text-sm mb-3 uppercase text-gray-400 font-bold lg:px-0 md:text-lg">
+        <div className="mt-6 lg:mt-0 lg:w-[55%]">
+          <h2 className="mb-3 px-5 text-sm font-bold uppercase text-gray-400 md:text-lg lg:px-0">
             Recomendados
           </h2>
 
-          <Carousel className=" overflow-x-auto pl-5 pr-0 lg:pl-0 md:max-w-3xl lg:max-w-6xl lg:overflow-hidden">
+          <Carousel className="overflow-x-auto pl-5 pr-0 md:max-w-3xl lg:max-w-6xl lg:overflow-hidden lg:pl-0">
             <CarouselContent>
               {barbershops.slice(0, 10).map((barbershop) => (
                 <CarouselItem
                   key={barbershop.id}
-                  className="min-w-[183px] max-w-[183px] md:min-w-[243px] md:max-w-[243px] "
+                  className="min-w-[183px] max-w-[183px] md:min-w-[243px] md:max-w-[243px]"
                 >
                   <BarbershopItem barbershop={barbershop} />
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden left-1 lg:flex" />
-            <CarouselNext className="hidden right-1 lg:flex" />
+            <CarouselPrevious className="left-1 hidden lg:flex" />
+            <CarouselNext className="right-1 hidden lg:flex" />
           </Carousel>
         </div>
 
@@ -128,12 +133,12 @@ export default async function Home() {
           style={{
             objectFit: "cover",
           }}
-          className="-z-30 opacity-40 grayscale hidden lg:flex max-h-[570px]"
+          className="-z-30 hidden max-h-[570px] opacity-40 grayscale lg:flex"
         />
       </div>
 
-      <div className="mt-6 lg:pt-6 lg:px-32">
-        <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
+      <div className="mt-6 lg:px-32 lg:pt-6">
+        <h2 className="mb-3 px-5 text-sm font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Conheça nossos destaques
         </h2>
 
@@ -141,41 +146,41 @@ export default async function Home() {
       </div>
 
       <div className="mt-6 lg:mt-16 lg:px-32">
-        <h2 className="px-5 text-sm mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-center lg:text-[26px] lg:px-0">
+        <h2 className="mb-3 px-5 text-sm font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Escolha sua Barbearia
         </h2>
 
-        <Carousel className="overflow-x-auto pl-5 pr-0 lg:pl-0 md:max-w-3xl lg:max-w-6xl lg:overflow-hidden">
+        <Carousel className="overflow-x-auto pl-5 pr-0 md:max-w-3xl lg:max-w-6xl lg:overflow-hidden lg:pl-0">
           <CarouselContent>
             {recomendedBarbershops.slice(0, 10).map((barbershop) => (
               <CarouselItem
                 key={barbershop.id}
-                className="min-w-[183px] max-w-[183px] md:min-w-[243px] md:max-w-[243px] lg:max-w-[275px] lg:min-w-[275px]"
+                className="min-w-[183px] max-w-[183px] md:min-w-[243px] md:max-w-[243px] lg:min-w-[275px] lg:max-w-[275px]"
               >
                 <BarbershopItem barbershop={barbershop} />
               </CarouselItem>
             ))}
           </CarouselContent>
 
-          <CarouselPrevious className="hidden left-1 lg:flex" />
+          <CarouselPrevious className="left-1 hidden lg:flex" />
 
-          <CarouselNext className="hidden right-1 lg:flex" />
+          <CarouselNext className="right-1 hidden lg:flex" />
         </Carousel>
       </div>
 
-      <div className="mt-6 mb-10 lg:my-16 lg:px-32">
-        <h2 className="px-5 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
+      <div className="mb-10 mt-6 lg:my-16 lg:px-32">
+        <h2 className="mb-3 px-5 text-sm font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Nossa Galeria
         </h2>
 
-        <section className="flex px-5 lg:px-0 flex-col w-full gap-3 grayscale">
+        <section className="flex w-full flex-col gap-3 px-5 grayscale lg:px-0">
           <div className="flex w-full gap-3">
-            <div className="flex flex-col w-full gap-3 overflow-hidden">
+            <div className="flex w-full flex-col gap-3 overflow-hidden">
               <div className="flex overflow-hidden rounded-lg">
                 <img
                   src="/image_galery_1.jpg"
                   alt="teste"
-                  className="object-cover w-full h-40 hover:scale-105 hover:opacity-30 duration-200"
+                  className="h-40 w-full object-cover duration-200 hover:scale-105 hover:opacity-30"
                 />
               </div>
 
@@ -183,7 +188,7 @@ export default async function Home() {
                 <img
                   src="/image_galery_2.jpg"
                   alt="teste"
-                  className="object-cover w-full h-40 hover:scale-105 hover:opacity-30 duration-200"
+                  className="h-40 w-full object-cover duration-200 hover:scale-105 hover:opacity-30"
                 />
               </div>
             </div>
@@ -193,7 +198,7 @@ export default async function Home() {
                 <img
                   src="/teste.jpeg"
                   alt="teste"
-                  className="object-cover h-[332px] w-[350px] md:w-[1000px] hover:scale-105 hover:opacity-30 duration-200"
+                  className="h-[332px] w-[350px] object-cover duration-200 hover:scale-105 hover:opacity-30 md:w-[1000px]"
                 />
               </div>
 
@@ -202,7 +207,7 @@ export default async function Home() {
                   <img
                     src="/image_galery_4.jpg"
                     alt="image_4"
-                    className="object-cover h-28 w-full md:w-[1400px] hover:scale-105 hover:opacity-30 duration-200"
+                    className="h-28 w-full object-cover duration-200 hover:scale-105 hover:opacity-30 md:w-[1400px]"
                   />
                 </div>
 
@@ -210,7 +215,7 @@ export default async function Home() {
                   <img
                     src="/image_galery_5.jpg"
                     alt="teste"
-                    className="object-cover h-[208px] w-full  hover:scale-105 hover:opacity-30 duration-200"
+                    className="h-[208px] w-full object-cover duration-200 hover:scale-105 hover:opacity-30"
                   />
                 </div>
               </div>
@@ -222,16 +227,16 @@ export default async function Home() {
               <img
                 src="/image_galery_6.jpg"
                 alt="image_6"
-                className="object-cover w-full h-[332px] hover:scale-105 hover:opacity-30 duration-200"
+                className="h-[332px] w-full object-cover duration-200 hover:scale-105 hover:opacity-30"
               />
             </div>
 
-            <div className="flex flex-col md:flex-row w-full md:w-[3000px] gap-3 overflow-hidden">
-              <div className="flex w-full md:w-[2500px] gap-3 overflow-hidden rounded-lg">
+            <div className="flex w-full flex-col gap-3 overflow-hidden md:w-[3000px] md:flex-row">
+              <div className="flex w-full gap-3 overflow-hidden rounded-lg md:w-[2500px]">
                 <img
                   src="image_galery_7.jpg"
                   alt="teste"
-                  className="object-cover w-full h-40 md:h-[332px] hover:scale-105 hover:opacity-30 duration-200"
+                  className="h-40 w-full object-cover duration-200 hover:scale-105 hover:opacity-30 md:h-[332px]"
                 />
               </div>
 
@@ -239,7 +244,7 @@ export default async function Home() {
                 <img
                   src="image_galery_8.jpg"
                   alt="teste"
-                  className="object-cover w-full h-40 md:h-[332px] hover:scale-105 hover:opacity-30 duration-200"
+                  className="h-40 w-full object-cover duration-200 hover:scale-105 hover:opacity-30 md:h-[332px]"
                 />
               </div>
             </div>
