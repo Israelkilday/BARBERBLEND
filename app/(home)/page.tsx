@@ -17,6 +17,7 @@ import {
   CarouselPrevious,
 } from "../_components/ui/carousel";
 import { Button } from "../_components/ui/button";
+import { EyeIcon, FootprintsIcon } from "lucide-react";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -69,9 +70,40 @@ export default async function Home() {
             <Search />
           </div>
 
-          <div className="flex gap-3">
-            <Button>
-              <Image />
+          <div className="[&&:: -webkit-scrollbar]:hidden mt-7 flex gap-3 overflow-x-scroll px-5 md:hidden">
+            <Button className="gap-2" variant="secondary">
+              <Image src="/scissors.svg" width={16} height={16} alt="Cabelo" />
+              Cabelo
+            </Button>
+
+            <Button className="gap-2" variant="secondary">
+              <Image src="/mustache.svg" width={16} height={16} alt="Barba" />
+              Barba
+            </Button>
+
+            <Button className="gap-2" variant="secondary">
+              <FootprintsIcon size={16} />
+              Pezinho
+            </Button>
+
+            <Button className="gap-2" variant="secondary">
+              <EyeIcon size={16} />
+              Sobrancelha
+            </Button>
+
+            <Button className="gap-2" variant="secondary">
+              <Image src="/massage.svg" width={16} height={16} alt="Massagem" />
+              Massagem
+            </Button>
+
+            <Button className="gap-2" variant="secondary">
+              <Image
+                src="/hydration.svg"
+                width={16}
+                height={16}
+                alt="Hidratação"
+              />
+              Hidratação
             </Button>
           </div>
 
