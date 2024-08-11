@@ -17,38 +17,7 @@ import {
   CarouselPrevious,
 } from "../_components/ui/carousel";
 import { Button } from "../_components/ui/button";
-
-interface QuickSearchOptions {
-  iamgeUrl: string;
-  title: string;
-}
-
-const quickSerachOptions: QuickSearchOptions[] = [
-  {
-    iamgeUrl: "/scissors.svg",
-    title: "Cabelo",
-  },
-  {
-    iamgeUrl: "/mustache.svg",
-    title: "Barba",
-  },
-  {
-    iamgeUrl: "/razor.svg",
-    title: "Pezinho",
-  },
-  {
-    iamgeUrl: "/eyebrow-fill.svg",
-    title: "Sobrancelha",
-  },
-  {
-    iamgeUrl: "/massage.svg",
-    title: "Massagem",
-  },
-  {
-    iamgeUrl: "/hidration.svg",
-    title: "Hidratação",
-  },
-];
+import { quickSerachOptions } from "../_constantes/quickSearch";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
