@@ -37,10 +37,6 @@ const SideMenu = () => {
 
             <h2 className="font-bold md:text-lg">{data.user.name}</h2>
           </div>
-
-          <Button variant="secondary" size="icon">
-            <LogOutIcon onClick={handleLogoutClick} />
-          </Button>
         </div>
       ) : (
         <div className="flex flex-col gap-3 px-5 py-6">
@@ -55,7 +51,7 @@ const SideMenu = () => {
             onClick={handleLoginClick}
             className="w-full justify-start md:py-5 md:text-base"
           >
-            <LogInIcon className="mr-2 md:block" size={20} />
+            <LogInIcon className="mr-2 md:block" size={24} />
             Fazer Login
           </Button>
         </div>
@@ -101,7 +97,6 @@ const SideMenu = () => {
         <Separator className="mt-1" />
 
         <div className="flex items-center gap-3">
-          {/* <Button className="mt-3" variant="ghost" size="icon"> */}
           <Button
             className="mt-3 w-full justify-start gap-2 pl-4"
             variant="outline"
