@@ -15,6 +15,15 @@ import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 import Image from "next/image";
 import { quickSerachOptions } from "../_constantes/quickSearch";
+import { FaGoogle } from "react-icons/fa";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
 
 const SideMenu = () => {
   const { data } = useSession();
@@ -39,28 +48,52 @@ const SideMenu = () => {
           </div>
         </div>
       ) : (
-        <div className="flex flex-col gap-3 px-5 py-6">
+        <div className="flex flex-col gap-5 px-5 py-6">
           <div className="flex items-center gap-2">
-            <UserIcon size={32} />
+            <UserIcon size={32} className="text-violet-700" />
 
-            <h2 className="font-bold md:text-lg">Olá, faça seu login</h2>
+            <h2 className="pt-3 font-bold md:text-lg">Olá, Faça seu Login!</h2>
           </div>
 
-          <Button
-            variant="secondary"
-            onClick={handleLoginClick}
-            className="w-full justify-start md:py-5 md:text-base"
-          >
-            <LogInIcon className="mr-2 md:block" size={24} />
-            Fazer Login
-          </Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant="outline"
+                className="w-full justify-start md:py-5 md:text-base"
+              >
+                <LogInIcon
+                  className="mr-2 text-violet-700 md:block"
+                  size={24}
+                />
+                Fazer Login
+              </Button>
+            </DialogTrigger>
+
+            <DialogContent className="w-[90%]">
+              <DialogHeader>
+                <DialogTitle>Faça Login na Plataforma</DialogTitle>
+                <DialogDescription>
+                  Conecte-se usando sua conta do Google.
+                </DialogDescription>
+              </DialogHeader>
+
+              <Button
+                className="flex gap-2"
+                onClick={handleLoginClick}
+                variant="secondary"
+              >
+                <FaGoogle className="h-5 w-5" />
+                Google
+              </Button>
+            </DialogContent>
+          </Dialog>
         </div>
       )}
 
       <div className="flex flex-col gap-3 px-5">
         <Button variant="outline" className="justify-start md:py-5" asChild>
           <Link href="/" className="md:text-base">
-            <HomeIcon size={20} className="mr-2 md:block" />
+            <HomeIcon size={20} className="mr-2 text-violet-700 md:block" />
             Inicio
           </Link>
         </Button>
@@ -68,7 +101,10 @@ const SideMenu = () => {
         {data?.user && (
           <Button variant="outline" className="justify-start md:py-5" asChild>
             <Link href="/bookings" className="md:text-base">
-              <CalendarIcon size={20} className="mr-2 md:block" />
+              <CalendarIcon
+                size={20}
+                className="mr-2 text-violet-700 md:block"
+              />
               Agendamentos
             </Link>
           </Button>
@@ -94,18 +130,26 @@ const SideMenu = () => {
           ))}
         </div>
 
-        <Separator className="mt-1" />
+        {data?.user && (
+          <div>
+            <Separator className="mt-1" />
 
-        <div className="flex items-center gap-3">
-          <Button
-            className="mt-3 w-full justify-start gap-2 pl-4"
-            variant="outline"
-            size="icon"
-          >
-            <LogOutIcon onClick={handleLogoutClick} />
-            <span className="block">Sair da Conta</span>
-          </Button>
-        </div>
+            <div className="flex items-center gap-3">
+              <Button
+                className="mt-6 w-full justify-start gap-2 pl-4"
+                variant="outline"
+                size="icon"
+              >
+                <LogOutIcon
+                  size={24}
+                  className="text-violet-700"
+                  onClick={handleLogoutClick}
+                />
+                <span className="block">Sair da Conta</span>
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
