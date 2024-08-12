@@ -77,7 +77,7 @@ export default async function Home() {
                   src={option.iamgeUrl}
                   width={16}
                   height={16}
-                  alt="Cabelo"
+                  alt={option.title}
                 />
                 {option.title}
               </Button>

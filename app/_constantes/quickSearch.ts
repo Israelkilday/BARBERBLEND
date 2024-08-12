@@ -25,7 +25,7 @@ export const quickSerachOptions: QuickSearchOptions[] = [
     title: "Massagem",
   },
   {
-    iamgeUrl: "/hidration.svg",
+    iamgeUrl: "/hydration.svg",
     title: "Hidratação",
   },
 ];
