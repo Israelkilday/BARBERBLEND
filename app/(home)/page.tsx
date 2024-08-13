@@ -71,7 +71,7 @@ export default async function Home() {
             <Search />
           </div>
 
-          <div className="[&&:: -webkit-scrollbar]:hidden mt-7 flex gap-3 overflow-x-scroll px-5 md:hidden">
+          <div className="[&&:: -webkit-scrollbar]:hidden mt-7 flex gap-3 overflow-x-scroll px-5 lg:hidden">
             {quickSerachOptions.map((option) => (
               <Button
                 className="gap-2"
@@ -152,6 +152,27 @@ export default async function Home() {
           }}
           className="-z-30 hidden max-h-[570px] opacity-40 grayscale lg:flex"
         />
+      </div>
+
+      <div className="mt-7 hidden justify-between gap-3 px-32 lg:flex">
+        {quickSerachOptions.map((option) => (
+          <Button
+            className="gap-2 px-8 text-lg"
+            variant="secondary"
+            key={option.title}
+            asChild
+          >
+            <Link href={`/barbershops?search=${option.title}`}>
+              <Image
+                src={option.iamgeUrl}
+                width={19}
+                height={19}
+                alt={option.title}
+              />
+              {option.title}
+            </Link>
+          </Button>
+        ))}
       </div>
 
       <div className="mt-6 lg:px-32 lg:pt-6">
