@@ -49,13 +49,13 @@ export default async function Home() {
     ]);
 
   return (
-    <div>
+    <div className="">
       <Header />
 
       <div className="justify-between lg:mb-16 lg:flex lg:px-32 lg:py-16">
         <div>
-          <div className="px-5 pt-5 lg:px-0 lg:py-0">
-            <h2 className="text-xl font-bold md:text-2xl">
+          <div className="px-5 pt-10 lg:px-0 lg:py-0 lg:pt-5">
+            <h2 className="font-bold md:text-2xl">
               {session?.user
                 ? `Olá, ${session.user.name?.split(" ")[0]}!`
                 : "Olá! Vamos agendar um corte hoje?"}
@@ -72,7 +72,7 @@ export default async function Home() {
             <Search />
           </div>
 
-          <div className="[&&:: -webkit-scrollbar]:hidden mt-7 flex gap-3 overflow-x-scroll px-5 lg:hidden">
+          <div className="[&&:: -webkit-scrollbar]:hidden mt-8 flex gap-3 overflow-x-scroll px-5 lg:hidden">
             {quickSerachOptions.map((option) => (
               <Button
                 className="gap-2"
@@ -123,7 +123,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="mt-6 lg:mt-0 lg:w-[55%]">
+        <div className="mt-8 lg:mt-0 lg:w-[55%]">
           <h2 className="mb-3 px-5 font-bold uppercase text-gray-400 md:text-lg lg:px-0">
             Recomendados
           </h2>
@@ -176,7 +176,7 @@ export default async function Home() {
         ))}
       </div>
 
-      <div className="mt-6 lg:px-32 lg:pt-6">
+      <div className="mt-8 lg:px-32 lg:pt-6">
         <h2 className="mb-3 px-5 font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Conheça nossos destaques
         </h2>
@@ -184,7 +184,7 @@ export default async function Home() {
         <ServicesSection />
       </div>
 
-      <div className="mt-6 lg:mt-16 lg:px-32">
+      <div className="mt-8 lg:mt-16 lg:px-32">
         <h2 className="mb-3 px-5 font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Escolha sua Barbearia
         </h2>
@@ -207,7 +207,7 @@ export default async function Home() {
         </Carousel>
       </div>
 
-      <div className="mb-10 mt-6 lg:mb-20 lg:mt-16 lg:px-32">
+      <div className="mb-16 mt-8 lg:mb-20 lg:mt-16 lg:px-32">
         <h2 className="mb-3 px-5 font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Nossa Galeria
         </h2>
