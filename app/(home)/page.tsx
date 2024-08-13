@@ -19,6 +19,7 @@ import {
 import { Button } from "../_components/ui/button";
 import { quickSerachOptions } from "../_constantes/quickSearch";
 import Link from "next/link";
+import Galery from "./_components/galery";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -157,7 +158,7 @@ export default async function Home() {
       <div className="mt-7 hidden justify-between gap-3 px-32 lg:flex">
         {quickSerachOptions.map((option) => (
           <Button
-            className="gap-2 px-8 text-lg"
+            className="gap-2 px-7 text-base"
             variant="secondary"
             key={option.title}
             asChild
@@ -165,8 +166,8 @@ export default async function Home() {
             <Link href={`/barbershops?search=${option.title}`}>
               <Image
                 src={option.iamgeUrl}
-                width={19}
-                height={19}
+                width={18}
+                height={18}
                 alt={option.title}
               />
               {option.title}
@@ -206,88 +207,12 @@ export default async function Home() {
         </Carousel>
       </div>
 
-      <div className="mb-10 mt-6 lg:my-16 lg:px-32">
+      <div className="mb-10 mt-6 lg:mb-20 lg:mt-16 lg:px-32">
         <h2 className="mb-3 px-5 font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Nossa Galeria
         </h2>
 
-        <section className="flex w-full flex-col gap-3 px-5 grayscale lg:px-0">
-          <div className="flex w-full gap-3">
-            <div className="flex w-full flex-col gap-3 overflow-hidden">
-              <div className="flex overflow-hidden rounded-lg">
-                <img
-                  src="/image_galery_1.jpg"
-                  alt="teste"
-                  className="h-40 w-full object-cover duration-200 hover:scale-105 hover:opacity-30"
-                />
-              </div>
-
-              <div className="flex overflow-hidden rounded-lg">
-                <img
-                  src="/image_galery_2.jpg"
-                  alt="teste"
-                  className="h-40 w-full object-cover duration-200 hover:scale-105 hover:opacity-30"
-                />
-              </div>
-            </div>
-
-            <div className="flex gap-3 overflow-hidden">
-              <div className="flex gap-3 overflow-hidden rounded-lg">
-                <img
-                  src="/teste.jpeg"
-                  alt="teste"
-                  className="h-[332px] w-[350px] object-cover duration-200 hover:scale-105 hover:opacity-30 md:w-[1000px]"
-                />
-              </div>
-
-              <div className="flex flex-col gap-3 overflow-hidden">
-                <div className="flex overflow-hidden rounded-lg">
-                  <img
-                    src="/image_galery_4.jpg"
-                    alt="image_4"
-                    className="h-28 w-full object-cover duration-200 hover:scale-105 hover:opacity-30 md:w-[1400px]"
-                  />
-                </div>
-
-                <div className="flex overflow-hidden rounded-lg">
-                  <img
-                    src="/image_galery_5.jpg"
-                    alt="teste"
-                    className="h-[208px] w-full object-cover duration-200 hover:scale-105 hover:opacity-30"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex w-full gap-3">
-            <div className="flex w-full gap-3 overflow-hidden rounded-lg">
-              <img
-                src="/image_galery_6.jpg"
-                alt="image_6"
-                className="h-[332px] w-full object-cover duration-200 hover:scale-105 hover:opacity-30"
-              />
-            </div>
-
-            <div className="flex w-full flex-col gap-3 overflow-hidden md:w-[3000px] md:flex-row">
-              <div className="flex w-full gap-3 overflow-hidden rounded-lg md:w-[2500px]">
-                <img
-                  src="image_galery_7.jpg"
-                  alt="teste"
-                  className="h-40 w-full object-cover duration-200 hover:scale-105 hover:opacity-30 md:h-[332px]"
-                />
-              </div>
-
-              <div className="flex w-full gap-3 overflow-hidden rounded-lg">
-                <img
-                  src="image_galery_8.jpg"
-                  alt="teste"
-                  className="h-40 w-full object-cover duration-200 hover:scale-105 hover:opacity-30 md:h-[332px]"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        <Galery />
       </div>
     </div>
   );

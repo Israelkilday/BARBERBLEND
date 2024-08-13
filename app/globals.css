@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {   
+@layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
@@ -25,7 +27,7 @@
     --ring: 262.1 83.3% 57.8%;
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 224 71.4% 4.1%;
     --foreground: 210 20% 98%;
@@ -48,12 +50,16 @@
     --ring: 263.4 70% 50.4%;
   }
 }
-  
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased h-screen flex flex-col;
+    @apply flex h-screen flex-col bg-background text-foreground antialiased;
+  }
+
+  .brand {
+    font-family: "Orbitron", sans-serif;
   }
 }
