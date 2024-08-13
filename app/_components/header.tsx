@@ -12,14 +12,15 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import SideMenu from "./side-menu";
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import { Avatar, AvatarImage } from "./ui/avatar";
+import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
+import SigInDialog from "./sig-in-dialog";
 
 const Header = () => {
   const { data } = useSession();
 
   const handleLogoutClick = () => signOut();
-  const handleLoginClick = () => signIn("google");
 
   return (
     <header>
@@ -65,13 +66,18 @@ const Header = () => {
               </div>
             </div>
           ) : (
-            <Button
-              onClick={handleLoginClick}
-              className="hidden hover:bg-primary/85 md:text-lg lg:flex"
-            >
-              <CircleUserRound className="mr-2" size={24} />
-              Login
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="hidden hover:bg-primary/85 md:text-lg lg:flex">
+                  <CircleUserRound className="mr-2" size={24} />
+                  Login
+                </Button>
+              </DialogTrigger>
+
+              <DialogContent className="w-[90%]">
+                <SigInDialog />
+              </DialogContent>
+            </Dialog>
           )}
 
           <Sheet>

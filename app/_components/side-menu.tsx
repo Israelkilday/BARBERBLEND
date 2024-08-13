@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import {
   CalendarIcon,
   HomeIcon,
@@ -15,21 +15,13 @@ import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 import Image from "next/image";
 import { quickSerachOptions } from "../_constantes/quickSearch";
-import { FaGoogle } from "react-icons/fa";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "./ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
+import SigInDialog from "./sig-in-dialog";
 
 const SideMenu = () => {
   const { data } = useSession();
 
   const handleLogoutClick = () => signOut();
-  const handleLoginClick = () => signIn("google");
 
   return (
     <>
@@ -75,21 +67,7 @@ const SideMenu = () => {
             </DialogTrigger>
 
             <DialogContent className="w-[90%]">
-              <DialogHeader>
-                <DialogTitle>Faça Login na Plataforma</DialogTitle>
-                <DialogDescription>
-                  Conecte-se usando sua conta do Google.
-                </DialogDescription>
-              </DialogHeader>
-
-              <Button
-                className="flex gap-2"
-                onClick={handleLoginClick}
-                variant="secondary"
-              >
-                <FaGoogle className="h-5 w-5" />
-                Google
-              </Button>
+              <SigInDialog />
             </DialogContent>
           </Dialog>
         </div>
