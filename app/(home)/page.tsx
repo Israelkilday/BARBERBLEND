@@ -49,7 +49,7 @@ export default async function Home() {
     ]);
 
   return (
-    <div className="">
+    <div>
       <Header />
 
       <div className="justify-between lg:mb-16 lg:flex lg:px-32 lg:py-16">
@@ -207,7 +207,7 @@ export default async function Home() {
         </Carousel>
       </div>
 
-      <div className="mb-16 mt-8 lg:mb-20 lg:mt-16 lg:px-32">
+      <div className="mb-16 mt-8 lg:mb-24 lg:mt-16 lg:px-32">
         <h2 className="mb-3 px-5 font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Nossa Galeria
         </h2>
