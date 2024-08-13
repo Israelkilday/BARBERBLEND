@@ -15,71 +15,71 @@ const scrollToTop = () => {
 const Footer = () => {
   return (
     <footer className="flex flex-col">
-      <div className="w-full flex flex-col justify-between lg:flex-row bg-secondary px-5 pt-6 pb-5 lg:pb-9 lg:pt-5 lg:px-32">
-        <div className="flex flex-col gap-5 items-start justify-center md:justify-start pb-1 lg:pt-5">
+      <div className="flex w-full flex-col justify-between bg-secondary px-5 pb-5 pt-6 lg:flex-row lg:px-32 lg:pb-9 lg:pt-5">
+        <div className="flex flex-col items-start justify-center gap-5 pb-1 md:justify-start lg:pt-5">
           <Link
             href="/"
-            className="flex gap-1 font-bold outline-none items-center"
+            className="flex items-center gap-1 font-bold outline-none"
           >
             <Scissors className="font-bold text-purple-500" />
 
-            <h2 className="md:text-lg font-berkshire-swash">BARBERBLEND</h2>
+            <h2 className="font-berkshire-swash md:text-lg">BARBERBLEND</h2>
 
-            <Scissors className="font-bold text-purple-500 trasform rotate-180" />
+            <Scissors className="trasform rotate-180 font-bold text-purple-500" />
           </Link>
 
           <div className="flex gap-3">
             <Link href="https://www.linkedin.com/in/israeldevfrontend">
-              <FaLinkedin className="size-6 text-gray-400 hover:text-secondary-foreground hover:font-bold duration-300" />
+              <FaLinkedin className="size-6 text-gray-400 duration-300 hover:font-bold hover:text-secondary-foreground" />
             </Link>
 
             <Link href="https://github.com/Israelkilday">
-              <FaGithub className="size-6 text-gray-400 hover:text-secondary-foreground hover:font-bold duration-300" />
+              <FaGithub className="size-6 text-gray-400 duration-300 hover:font-bold hover:text-secondary-foreground" />
             </Link>
 
             <Link href="https://www.instagram.com/israelkilday/">
-              <FaInstagram className="size-6 text-gray-400 hover:text-secondary-foreground hover:font-bold duration-300" />
+              <FaInstagram className="size-6 text-gray-400 duration-300 hover:font-bold hover:text-secondary-foreground" />
             </Link>
 
             <a href="mailto:israel.kilday@yahoo.com.br">
-              <MdEmail className="size-6 text-gray-400 hover:text-secondary-foreground hover:font-bold duration-300" />
+              <MdEmail className="size-[26px] text-gray-400 duration-300 hover:font-bold hover:text-secondary-foreground" />
             </a>
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row pt-5 lg:px-0 gap-5 lg:gap-10">
+        <div className="flex flex-col gap-5 pt-5 lg:flex-row lg:gap-10 lg:px-0">
           <div className="flex flex-col">
             <h3 className="md:pl-5">DEPARTAMENTOS</h3>
-            <div className="flex items-center gap-1 group">
-              <Scissors className="size-4 font-bold opacity-0 group-hover:opacity-100 duration-200" />
+            <div className="group flex items-center gap-1">
+              <Scissors className="size-4 font-bold opacity-0 duration-200 group-hover:opacity-100" />
               <p className="text-gray-400">Serviços</p>
             </div>
 
-            <div className="flex items-center gap-1 group">
-              <Scissors className="size-4 font-bold opacity-0 group-hover:opacity-100 duration-200" />
+            <div className="group flex items-center gap-1">
+              <Scissors className="size-4 font-bold opacity-0 duration-200 group-hover:opacity-100" />
               <p className="text-gray-400">Agendamentos</p>
             </div>
 
-            <div className="flex items-center gap-1 group">
-              <Scissors className="size-4 font-bold opacity-0 group-hover:opacity-100 duration-200" />
+            <div className="group flex items-center gap-1">
+              <Scissors className="size-4 font-bold opacity-0 duration-200 group-hover:opacity-100" />
               <p className="text-gray-400">Barbearias Recomendadas</p>
             </div>
           </div>
 
           <div className="flex flex-col">
             <h3 className="md:pl-5">INSTITUCIONAL</h3>
-            <div className="flex items-center gap-1 group">
-              <Scissors className="size-4 font-bold opacity-0 group-hover:opacity-100 duration-200" />
+            <div className="group flex items-center gap-1">
+              <Scissors className="size-4 font-bold opacity-0 duration-200 group-hover:opacity-100" />
               <p className="text-gray-400">Sobre a BARBERBLEND</p>
             </div>
 
-            <div className="flex items-center gap-1 group">
-              <Scissors className="size-4 font-bold opacity-0 group-hover:opacity-100 duration-200" />
+            <div className="group flex items-center gap-1">
+              <Scissors className="size-4 font-bold opacity-0 duration-200 group-hover:opacity-100" />
               <p className="text-gray-400">Termos e condições</p>
             </div>
 
-            <div className="flex items-center gap-1 group">
-              <Scissors className="size-4 font-bold opacity-0 group-hover:opacity-100 duration-200" />
+            <div className="group flex items-center gap-1">
+              <Scissors className="size-4 font-bold opacity-0 duration-200 group-hover:opacity-100" />
               <p className="text-gray-400">
                 Política de segurança e privacidade
               </p>
@@ -101,15 +101,31 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between px-5 lg:px-32 py-5 border-t border-gray-700 bg-secondary">
-        <p className="text-gray-400 text-sm font-bold opacity-75 md:text-base">
-          © 2024 ISRAEL KILDAY
-          <br className="md:hidden" /> - Todos os direitos reservados
-        </p>
+      <div className="flex items-center justify-between border-t border-gray-700 bg-secondary px-5 py-5 lg:px-32">
+        <div className="lg:flex lg:gap-5">
+          <p className="text-sm font-bold text-gray-400 md:text-base">
+            © 2024 BARBERBLEND
+            <br className="md:hidden" /> Todos os direitos reservados
+          </p>
+
+          <p className="text-sm font-bold text-gray-400 md:text-base">
+            <a
+              href="https://portfolioikdev-zeta-nine.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Desenvolvido por: &lt;/
+              <span className="brand tracking-widest text-white duration-150 hover:text-emerald-400">
+                Israel Kilday
+              </span>
+              &gt;
+            </a>
+          </p>
+        </div>
 
         <button
           onClick={scrollToTop}
-          className="p-2 border border-gray-600 rounded-full outline-none animate-bounce"
+          className="animate-bounce rounded-full border border-gray-600 p-2 outline-none"
         >
           <ArrowUp />
         </button>
