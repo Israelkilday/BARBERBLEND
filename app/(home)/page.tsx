@@ -18,6 +18,7 @@ import {
 } from "../_components/ui/carousel";
 import { Button } from "../_components/ui/button";
 import { quickSerachOptions } from "../_constantes/quickSearch";
+import Link from "next/link";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -72,14 +73,21 @@ export default async function Home() {
 
           <div className="[&&:: -webkit-scrollbar]:hidden mt-7 flex gap-3 overflow-x-scroll px-5 md:hidden">
             {quickSerachOptions.map((option) => (
-              <Button className="gap-2" variant="secondary" key={option.title}>
-                <Image
-                  src={option.iamgeUrl}
-                  width={16}
-                  height={16}
-                  alt={option.title}
-                />
-                {option.title}
+              <Button
+                className="gap-2"
+                variant="secondary"
+                key={option.title}
+                asChild
+              >
+                <Link href={`/barbershops?search=${option.title}`}>
+                  <Image
+                    src={option.iamgeUrl}
+                    width={16}
+                    height={16}
+                    alt={option.title}
+                  />
+                  {option.title}
+                </Link>
               </Button>
             ))}
           </div>

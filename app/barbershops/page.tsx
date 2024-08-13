@@ -17,10 +17,24 @@ const BarbershopsPage = async ({ searchParams }: BarbershopsPageProps) => {
 
   const barbershops = await db.barbershop.findMany({
     where: {
-      name: {
-        contains: searchParams.search,
-        mode: "insensitive",
-      },
+      OR: [
+        {
+          name: {
+            contains: searchParams.search,
+            mode: "insensitive",
+          },
+        },
+        {
+          services: {
+            some: {
+              name: {
+                contains: searchParams.search,
+                mode: "insensitive",
+              },
+            },
+          },
+        },
+      ],
     },
   });
 
@@ -28,20 +42,20 @@ const BarbershopsPage = async ({ searchParams }: BarbershopsPageProps) => {
     <>
       <Header />
 
-      <div className="px-5 lg:px-0 py-6 flex flex-col gap-4">
-        <div className="md:w-1/2 lg:w-1/2 lg:px-32 lg:pt-5 ">
+      <div className="flex flex-col gap-4 px-5 pb-16 pt-10 lg:px-0">
+        <div className="md:w-1/2 lg:w-1/2 lg:px-32 lg:pt-5">
           <Search
             defaultValues={{
-              search: searchParams.search,
+              title: searchParams.search,
             }}
           />
         </div>
 
-        <h1 className="text-gray-400 font-bold text-xs md:text-lg lg:text-xl uppercase lg:px-32 lg:pt-5">
+        <h1 className="text-xs font-bold uppercase text-gray-400 md:text-lg lg:px-32 lg:pt-5 lg:text-xl">
           Resultados para &quot;{searchParams.search}&quot;
         </h1>
 
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:px-32 lg:pt-5 lg:mb-20">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:mb-20 lg:grid-cols-4 lg:px-32 lg:pt-5">
           {barbershops.map((barbershop) => (
             <div key={barbershop.id} className="md:w-full">
               <BarbershopItem barbershop={barbershop} />

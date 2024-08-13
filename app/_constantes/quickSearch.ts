@@ -14,7 +14,7 @@ export const quickSerachOptions: QuickSearchOptions[] = [
   },
   {
     iamgeUrl: "/razor.svg",
-    title: "Pezinho",
+    title: "Pézinho",
   },
   {
     iamgeUrl: "/eyebrow-fill.svg",

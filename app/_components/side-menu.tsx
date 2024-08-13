@@ -118,14 +118,17 @@ const SideMenu = () => {
               className="justify-start gap-2"
               variant="ghost"
               key={option.title}
+              asChild
             >
-              <Image
-                src={option.iamgeUrl}
-                width={17}
-                height={17}
-                alt={option.title}
-              />
-              {option.title}
+              <Link href={`/barbershops?search=${option.title}`}>
+                <Image
+                  src={option.iamgeUrl}
+                  width={17}
+                  height={17}
+                  alt={option.title}
+                />
+                {option.title}
+              </Link>
             </Button>
           ))}
         </div>
