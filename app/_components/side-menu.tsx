@@ -123,14 +123,11 @@ const SideMenu = () => {
             <div className="flex items-center gap-3">
               <Button
                 className="mt-6 w-full justify-start gap-2 pl-4"
+                onClick={handleLogoutClick}
                 variant="outline"
                 size="icon"
               >
-                <LogOutIcon
-                  size={24}
-                  className="text-violet-700"
-                  onClick={handleLogoutClick}
-                />
+                <LogOutIcon size={24} className="text-violet-700" />
                 <span className="block">Sair da Conta</span>
               </Button>
             </div>

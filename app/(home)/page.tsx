@@ -54,7 +54,7 @@ export default async function Home() {
 
       <div className="justify-between lg:mb-16 lg:flex lg:px-32 lg:py-16">
         <div>
-          <div className="px-5 pt-10 lg:px-0 lg:py-0 lg:pt-5">
+          <div className="px-5 pt-10 lg:px-0 lg:py-0 lg:pt-0">
             <h2 className="font-bold md:text-2xl">
               {session?.user
                 ? `Olá, ${session.user.name?.split(" ")[0]}!`
