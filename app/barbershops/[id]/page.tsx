@@ -34,14 +34,14 @@ const BarbershopDetailsPage = async ({
   }
 
   return (
-    <div>
+    <div className="pb-5">
       <BarbershopInfo barbershop={barbershop} />
 
-      <h2 className="px-5 md:px-32 text-sm lg:text-center mb-3 mt-3 lg:mt-16 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px]">
+      <h2 className="mb-3 mt-3 px-5 uppercase text-gray-400 md:px-32 md:text-lg lg:mb-6 lg:mt-16 lg:text-center lg:text-[26px]">
         NOSSOS SERVIÇOS
       </h2>
 
-      <div className="px-5  flex flex-col gap-4 mb-6 lg:grid grid-cols-2 md:px-32 lg:mb-16">
+      <div className="mb-6 flex grid-cols-2 flex-col gap-4 px-5 md:px-32 lg:mb-16 lg:grid">
         {barbershop.services.map((service) => (
           <ServiceItem
             key={service.id}
@@ -52,8 +52,8 @@ const BarbershopDetailsPage = async ({
         ))}
       </div>
 
-      <div className="mb-12 lg:px-32 md:mb-16">
-        <h2 className="px-5 md:px-32 text-sm lg:text-center mb-3 lg:mb-6 uppercase text-gray-400 font-bold md:text-lg lg:text-[26px] lg:px-0">
+      <div className="mb-12 md:mb-16 lg:px-32">
+        <h2 className="mb-3 px-5 uppercase text-gray-400 md:px-32 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Conheça nossa equipe
         </h2>
 
