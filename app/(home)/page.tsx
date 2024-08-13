@@ -95,7 +95,7 @@ export default async function Home() {
           <div className="mt-6 pl-5 pr-0 lg:px-0">
             {confirmedBookings.length > 0 && (
               <>
-                <h2 className="mb-3 text-sm font-bold uppercase text-gray-400 md:text-lg lg:pl-0">
+                <h2 className="mb-3 font-bold uppercase text-gray-400 md:text-lg lg:pl-0">
                   Agendamentos
                 </h2>
 
@@ -123,7 +123,7 @@ export default async function Home() {
         </div>
 
         <div className="mt-6 lg:mt-0 lg:w-[55%]">
-          <h2 className="mb-3 px-5 text-sm font-bold uppercase text-gray-400 md:text-lg lg:px-0">
+          <h2 className="mb-3 px-5 font-bold uppercase text-gray-400 md:text-lg lg:px-0">
             Recomendados
           </h2>
 
@@ -155,7 +155,7 @@ export default async function Home() {
       </div>
 
       <div className="mt-6 lg:px-32 lg:pt-6">
-        <h2 className="mb-3 px-5 text-sm font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
+        <h2 className="mb-3 px-5 font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Conheça nossos destaques
         </h2>
 
@@ -163,7 +163,7 @@ export default async function Home() {
       </div>
 
       <div className="mt-6 lg:mt-16 lg:px-32">
-        <h2 className="mb-3 px-5 text-sm font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
+        <h2 className="mb-3 px-5 font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Escolha sua Barbearia
         </h2>
 
@@ -186,7 +186,7 @@ export default async function Home() {
       </div>
 
       <div className="mb-10 mt-6 lg:my-16 lg:px-32">
-        <h2 className="mb-3 px-5 text-sm font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
+        <h2 className="mb-3 px-5 font-bold uppercase text-gray-400 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Nossa Galeria
         </h2>
 
