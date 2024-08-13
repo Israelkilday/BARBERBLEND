@@ -44,7 +44,12 @@ const SideMenu = () => {
               <AvatarImage src={data.user?.image ?? ""} />
             </Avatar>
 
-            <h2 className="font-bold md:text-lg">{data.user.name}</h2>
+            <div>
+              <h3 className="font-bold md:text-lg">{data.user.name}</h3>
+              <span className="block text-xs text-muted-foreground">
+                {data?.user?.email}
+              </span>
+            </div>
           </div>
         </div>
       ) : (
