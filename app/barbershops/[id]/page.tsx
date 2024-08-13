@@ -37,7 +37,7 @@ const BarbershopDetailsPage = async ({
     <div className="pb-5">
       <BarbershopInfo barbershop={barbershop} />
 
-      <h2 className="mb-3 mt-3 px-5 uppercase text-gray-400 md:px-32 md:text-lg lg:mb-6 lg:mt-16 lg:text-center lg:text-[26px]">
+      <h2 className="mb-3 mt-3 px-5 uppercase text-gray-400 md:px-32 md:text-lg lg:mb-6 lg:mt-14 lg:text-center lg:text-[26px]">
         NOSSOS SERVIÇOS
       </h2>
 
@@ -52,7 +52,7 @@ const BarbershopDetailsPage = async ({
         ))}
       </div>
 
-      <div className="mb-12 md:mb-16 lg:px-32">
+      <div className="mb-12 mt-7 md:mb-16 lg:px-32">
         <h2 className="mb-3 px-5 uppercase text-gray-400 md:px-32 md:text-lg lg:mb-6 lg:px-0 lg:text-center lg:text-[26px]">
           Conheça nossa equipe
         </h2>
