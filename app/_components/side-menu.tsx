@@ -103,7 +103,7 @@ const SideMenu = () => {
               key={option.title}
               asChild
             >
-              <Link href={`/barbershops?search=${option.title}`}>
+              <Link href={`/barbershops?service=${option.title}`}>
                 <Image
                   src={option.iamgeUrl}
                   width={17}

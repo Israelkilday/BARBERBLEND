@@ -80,7 +80,7 @@ export default async function Home() {
                 key={option.title}
                 asChild
               >
-                <Link href={`/barbershops?search=${option.title}`}>
+                <Link href={`/barbershops?service=${option.title}`}>
                   <Image
                     src={option.iamgeUrl}
                     width={16}
@@ -163,7 +163,7 @@ export default async function Home() {
             key={option.title}
             asChild
           >
-            <Link href={`/barbershops?search=${option.title}`}>
+            <Link href={`/barbershops?service=${option.title}`}>
               <Image
                 src={option.iamgeUrl}
                 width={18}
