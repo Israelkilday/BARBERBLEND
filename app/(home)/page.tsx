@@ -99,6 +99,8 @@ export default async function Home() {
               alt="Agende nos melhores com FSW Barber"
               src="/banner.jpg"
               fill
+              priority
+              quality={100}
               className="object-cover"
             />
           </div>

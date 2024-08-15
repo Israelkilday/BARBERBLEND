@@ -24,6 +24,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/app/_components/ui/sheet";
+import { Dialog, DialogContent } from "@/app/_components/ui/dialog";
+import SigInDialog from "@/app/_components/sig-in-dialog";
 
 interface ServiceItemProps {
   barbershop: Barbershop;
@@ -40,6 +42,7 @@ const ServiceItem = ({
 
   const { data } = useSession();
 
+  const [signInDialogIsOpen, setSignInDialogIsOpen] = useState(false);
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [hour, setHour] = useState<string | undefined>();
   const [submitIsLoading, setSubmitIsLoading] = useState(false);
@@ -71,7 +74,7 @@ const ServiceItem = ({
 
   const handleBookingClick = () => {
     if (!isAuthenticated) {
-      return signIn("google");
+      return setSignInDialogIsOpen(true);
     }
   };
 
@@ -141,134 +144,147 @@ const ServiceItem = ({
   }, [date, dayBookings]);
 
   return (
-    <Card>
-      <CardContent className="p-3">
-        <div className="flex items-center gap-4">
-          <div className="relative max-h-[110px] min-h-[110px] min-w-[110px] max-w-[110px]">
-            <Image
-              fill
-              src={service.imageUrl}
-              alt={service.name}
-              style={{ objectFit: "contain" }}
-              className="rounded-lg"
-            />
-          </div>
+    <>
+      <Card>
+        <CardContent className="p-3">
+          <div className="flex items-center gap-4">
+            <div className="relative max-h-[110px] min-h-[110px] min-w-[110px] max-w-[110px]">
+              <Image
+                fill
+                src={service.imageUrl}
+                alt={service.name}
+                style={{ objectFit: "contain" }}
+                className="rounded-lg"
+              />
+            </div>
 
-          <div className="flex w-full flex-col">
-            <h2 className="font-bold lg:text-base">{service.name}</h2>
+            <div className="flex w-full flex-col">
+              <h2 className="font-bold lg:text-base">{service.name}</h2>
 
-            <p className="text-sm text-gray-400">{service.description}</p>
+              <p className="text-sm text-gray-400">{service.description}</p>
 
-            <div className="mt-3 flex items-center justify-between">
-              <p className="text-sm font-bold text-primary lg:text-base">
-                {Intl.NumberFormat("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
-                }).format(Number(service.price))}
-              </p>
+              <div className="mt-3 flex items-center justify-between">
+                <p className="text-sm font-bold text-primary lg:text-base">
+                  {Intl.NumberFormat("pt-BR", {
+                    style: "currency",
+                    currency: "BRL",
+                  }).format(Number(service.price))}
+                </p>
 
-              <Sheet open={sheetIsOpen} onOpenChange={setSheetIsOpen}>
-                <SheetTrigger asChild>
-                  <Button variant="secondary" onClick={handleBookingClick}>
-                    Reservar
-                  </Button>
-                </SheetTrigger>
+                <Sheet open={sheetIsOpen} onOpenChange={setSheetIsOpen}>
+                  <SheetTrigger asChild>
+                    <Button variant="secondary" onClick={handleBookingClick}>
+                      Reservar
+                    </Button>
+                  </SheetTrigger>
 
-                <SheetContent className="p-0">
-                  <SheetHeader className="border-b border-solid border-secondary px-5 py-5 text-left lg:hidden">
-                    <SheetTitle>Fazer Reserva</SheetTitle>
-                  </SheetHeader>
+                  <SheetContent className="p-0">
+                    <SheetHeader className="border-b border-solid border-secondary px-5 py-5 text-left lg:hidden">
+                      <SheetTitle>Fazer Reserva</SheetTitle>
+                    </SheetHeader>
 
-                  <div className="lg:flex lg:px-0 lg:pt-5">
-                    <div className="py-4 lg:pb-2">
-                      <Calendar
-                        mode="single"
-                        selected={date}
-                        onSelect={handleDateClick}
-                        className="mt-0 pb-0 pt-0"
-                        locale={ptBR}
-                        fromDate={new Date()}
-                        styles={{
-                          head_cell: {
-                            width: "100%",
-                            textTransform: "capitalize",
-                          },
+                    <div className="lg:flex lg:px-0 lg:pt-5">
+                      <div className="py-4 lg:pb-2">
+                        <Calendar
+                          mode="single"
+                          selected={date}
+                          onSelect={handleDateClick}
+                          className="mt-0 pb-0 pt-0"
+                          locale={ptBR}
+                          fromDate={new Date()}
+                          styles={{
+                            head_cell: {
+                              width: "100%",
+                              textTransform: "capitalize",
+                            },
 
-                          cell: {
-                            width: "100%",
-                          },
+                            cell: {
+                              width: "100%",
+                            },
 
-                          button: {
-                            width: "100%",
-                          },
+                            button: {
+                              width: "100%",
+                            },
 
-                          nav_button_previous: {
-                            width: "32px",
-                            height: "32px",
-                          },
+                            nav_button_previous: {
+                              width: "32px",
+                              height: "32px",
+                            },
 
-                          nav_button_next: {
-                            width: "32px",
-                            height: "32px",
-                          },
+                            nav_button_next: {
+                              width: "32px",
+                              height: "32px",
+                            },
 
-                          caption: {
-                            textTransform: "capitalize",
-                          },
+                            caption: {
+                              textTransform: "capitalize",
+                            },
+                          }}
+                        />
+                      </div>
+
+                      {date && (
+                        <div className="[&:: -webkit-scrollbar]:hidden flex grid-cols-3 gap-3 overflow-x-auto border-t border-solid border-secondary px-5 py-4 lg:grid lg:border-none">
+                          {timeList.map((time) => (
+                            <Button
+                              variant={hour === time ? "default" : "outline"}
+                              key={time}
+                              className="rounded-full"
+                              onClick={() => handleHourClick(time)}
+                            >
+                              {time}
+                            </Button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="border-t border-solid border-secondary px-5 py-4">
+                      <BookingInfo
+                        booking={{
+                          barbershop: barbershop,
+                          date:
+                            date && hour
+                              ? setMinutes(
+                                  setHours(date, Number(hour.split(":")[0])),
+                                  Number(hour.split(":")[1]),
+                                )
+                              : undefined,
+                          Service: service,
                         }}
                       />
                     </div>
 
-                    {date && (
-                      <div className="[&:: -webkit-scrollbar]:hidden flex grid-cols-3 gap-3 overflow-x-auto border-t border-solid border-secondary px-5 py-4 lg:grid lg:border-none">
-                        {timeList.map((time) => (
-                          <Button
-                            variant={hour === time ? "default" : "outline"}
-                            key={time}
-                            className="rounded-full"
-                            onClick={() => handleHourClick(time)}
-                          >
-                            {time}
-                          </Button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="border-t border-solid border-secondary px-5 py-4">
-                    <BookingInfo
-                      booking={{
-                        barbershop: barbershop,
-                        date:
-                          date && hour
-                            ? setMinutes(
-                                setHours(date, Number(hour.split(":")[0])),
-                                Number(hour.split(":")[1]),
-                              )
-                            : undefined,
-                        Service: service,
-                      }}
-                    />
-                  </div>
-
-                  <SheetFooter className="px-5">
-                    <Button
-                      onClick={handleBookingSubmit}
-                      disabled={!hour || !date || submitIsLoading}
-                    >
-                      {submitIsLoading && (
-                        <Loader2 className="mr-2 flex h-4 w-4 animate-spin lg:text-base" />
-                      )}
-                      Confirmar reserva
-                    </Button>
-                  </SheetFooter>
-                </SheetContent>
-              </Sheet>
+                    <SheetFooter className="px-5">
+                      <Button
+                        onClick={handleBookingSubmit}
+                        disabled={!hour || !date || submitIsLoading}
+                      >
+                        {submitIsLoading && (
+                          <Loader2 className="mr-2 flex h-4 w-4 animate-spin lg:text-base" />
+                        )}
+                        Confirmar reserva
+                      </Button>
+                    </SheetFooter>
+                  </SheetContent>
+                </Sheet>
+              </div>
             </div>
           </div>
-        </div>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+
+      <Dialog
+        open={signInDialogIsOpen}
+        onOpenChange={(open) => {
+          setSignInDialogIsOpen(open);
+        }}
+      >
+        <DialogContent>
+          <SigInDialog />
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 
