@@ -94,6 +94,15 @@ export default async function Home() {
             ))}
           </div>
 
+          <div className="relative mt-8 h-[190px] w-full md:h-72 lg:hidden">
+            <Image
+              alt="Agende nos melhores com FSW Barber"
+              src="/banner.jpg"
+              fill
+              className="object-cover"
+            />
+          </div>
+
           <div className="mt-6 pl-5 pr-0 lg:px-0">
             {confirmedBookings.length > 0 && (
               <>
