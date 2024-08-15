@@ -13,7 +13,7 @@ const SigInDialog = () => {
       <DialogHeader>
         <DialogTitle>Faça Login na Plataforma</DialogTitle>
         <DialogDescription>
-          Conecte-se usando sua conta do Google.
+          Conecte-se com sua conta do Google para habilitar agendamento.
         </DialogDescription>
       </DialogHeader>
 

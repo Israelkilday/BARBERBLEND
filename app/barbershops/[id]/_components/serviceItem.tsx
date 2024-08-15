@@ -258,7 +258,9 @@ const ServiceItem = ({
                     <SheetFooter className="px-5">
                       <Button
                         onClick={handleBookingSubmit}
-                        disabled={!hour || !date || submitIsLoading}
+                        disabled={
+                          !isAuthenticated || !hour || !date || submitIsLoading
+                        }
                       >
                         {submitIsLoading && (
                           <Loader2 className="mr-2 flex h-4 w-4 animate-spin lg:text-base" />
@@ -280,7 +282,7 @@ const ServiceItem = ({
           setSignInDialogIsOpen(open);
         }}
       >
-        <DialogContent>
+        <DialogContent className="w-[90%]">
           <SigInDialog />
         </DialogContent>
       </Dialog>
