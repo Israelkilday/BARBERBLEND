@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { ptBR } from "date-fns/locale";
-import { addDays, format, setHours, setMinutes } from "date-fns";
+import { format, setHours, setMinutes } from "date-fns";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { generateDayTimeList } from "../_helpers/hours";
