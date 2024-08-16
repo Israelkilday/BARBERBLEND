@@ -109,12 +109,13 @@ const Footer = () => {
           </p>
 
           <p className="text-sm font-bold text-gray-400 md:text-base">
+            Desenvolvido por:&nbsp;
             <a
               href="https://portfolioikdev-zeta-nine.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Desenvolvido por: &lt;/
+              &lt;/
               <span className="brand tracking-widest text-white duration-150 hover:text-emerald-400">
                 Israel Kilday
               </span>
