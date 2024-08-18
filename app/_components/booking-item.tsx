@@ -132,7 +132,7 @@ const BookingItem = ({ booking }: BookingItemProps) => {
                   </Avatar>
 
                   <div>
-                    <h2 className="font-bold lg:text-base">
+                    <h2 className="text-sm font-bold lg:text-base">
                       {booking.barbershop.name}
                     </h2>
 
