@@ -20,7 +20,6 @@ import { Button } from "../_components/ui/button";
 import { quickSerachOptions } from "../_constantes/quickSearch";
 import Link from "next/link";
 import Galery from "./_components/galery";
-import { SheetClose } from "../_components/ui/sheet";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
