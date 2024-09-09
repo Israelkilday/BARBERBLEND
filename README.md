@@ -13,15 +13,17 @@
 
 https://github.com/Israelkilday/barbershop/assets/101229204/6e473802-9031-43e1-b867-68eb06ee5dde
 
-## Fluxograma da aplicação
+## Fluxograma de login
 
-![Untitled diagram-2024-06-19-232807](https://github.com/Israelkilday/BARBERBLEND/assets/101229204/f2905a10-ec88-43f6-9bc0-6aad8f87db97)
+![Diagrama barberblend drawio](https://github.com/user-attachments/assets/3e887d52-71b9-4b04-95fd-be8a1bd3f19d)
+
+## Fluxograma de Reserva
+
+![fluxograma de reserva barberblend drawio](https://github.com/user-attachments/assets/0240d8e4-e47d-4bf3-a557-1530757df97b)
 
 ## Diagrama Entidade-Relacionamento do Esquema Prisma:
 
 ![Untitled diagram-2024-06-19-220414](https://github.com/Israelkilday/BARBERBLEND/assets/101229204/a712c2e5-0d8c-4ede-95e9-03a2edc28131)
-
-
 
 ## ⚙️ Pré-requisitos
 
