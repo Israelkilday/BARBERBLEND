@@ -13,7 +13,7 @@
 
 https://github.com/Israelkilday/barbershop/assets/101229204/6e473802-9031-43e1-b867-68eb06ee5dde
 
-## Fluxograma de login
+## Fluxograma de Login
 
 ![Diagrama barberblend drawio](https://github.com/user-attachments/assets/3e887d52-71b9-4b04-95fd-be8a1bd3f19d)
 
