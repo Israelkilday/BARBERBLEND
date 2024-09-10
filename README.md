@@ -19,7 +19,7 @@ https://github.com/Israelkilday/barbershop/assets/101229204/6e473802-9031-43e1-b
 
 ## Fluxograma de Reserva
 
-![fluxograma de reserva barberblend drawio](https://github.com/user-attachments/assets/0240d8e4-e47d-4bf3-a557-1530757df97b)
+![fluxograma booking barberblend drawio](https://github.com/user-attachments/assets/574e46c0-8bf5-4b8a-952a-9936f645eedf)
 
 ## Diagrama Entidade-Relacionamento do Esquema Prisma:
 
